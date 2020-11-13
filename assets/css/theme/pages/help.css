@@ -1,0 +1,125 @@
+/* -- :: Header */
+header {
+  background: -webkit-gradient(linear, left top, right top, from(var(--thBlue)), to(var(--thBlue2)));
+  background: linear-gradient(to right, var(--thBlue), var(--thBlue2));
+}
+header h1 {
+  color: #fff;
+  font-size: 36px;
+  font-weight: bold;
+}
+/* ------------------------------- */
+
+/* -- :: Section I */
+.se-i {
+  padding: 40px 0;
+}
+.se-i .content-box {
+  border: 1px solid var(--thWhite3);
+  border-radius: 4px;
+  background: #fff;
+  padding: 30px 30px 0;
+  margin-bottom: 30px;
+}
+.se-i .content-box form {
+  margin-bottom: 45px;
+}
+.se-i .content-box form input {
+  background: #fff;
+  padding: 18px 54px 18px 24px;
+  font-size: 14px;
+  border: 1px solid var(--thWhite2);
+  border-radius: 4px;
+  outline: none;
+  color: var(--thBlack);
+  font-weight: 600;
+}
+.se-i .content-box form input::-webkit-input-placeholder {
+  color: var(--thWhite3);
+  font-weight: 400;
+}
+.se-i .content-box form input::-moz-placeholder {
+  color: var(--thWhite3);
+  font-weight: 400;
+}
+.se-i .content-box form input:-ms-input-placeholder {
+  color: var(--thWhite3);
+  font-weight: 400;
+}
+.se-i .content-box form input::-ms-input-placeholder {
+  color: var(--thWhite3);
+  font-weight: 400;
+}
+.se-i .content-box form input::placeholder {
+  color: var(--thWhite3);
+  font-weight: 400;
+}
+.se-i .content-box form input:focus {
+  border-color: var(--thWhite3);
+  background: var(--thWhite2);
+}
+.se-i .content-box form button {
+  position: absolute;
+  right: 18px;
+  background: transparent;
+  border: none;
+  color: var(--thGray);
+  -webkit-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
+}
+.se-i .content-box form button:hover {
+  color: var(--thBlue);
+}
+.se-i .content-box .boxes .box {
+  border: 1px solid var(--thWhite2);
+  background: #fff;
+  padding: 20px;
+  border-radius: 4px;
+}
+.se-i .content-box .boxes .box h6 {
+  font-size: 14px;
+  color: var(--thGray2);
+  font-weight: 600;
+}
+.se-i .content-box .boxes .box:hover {
+  border-color: var(--thWhite3);
+  background: var(--thWhite2);
+}
+.se-i .content-box .boxes .box:hover h6 {
+  color: var(--thBlack);
+}
+.se-i .content-box-ii {
+  border: 1px solid var(--thWhite3);
+  border-radius: 4px;
+  background: #fff;
+  padding: 30px;
+}
+.se-i .content-box-ii h5 {
+  font-size: 24px;
+  color: var(--thBlack);
+}
+.se-i .content-box-ii p.des {
+  font-size: 14px;
+  color: var(--thGray);
+}
+.se-i .content-box-ii p.info {
+  color: var(--thGray2);
+  font-size: 16px;
+  font-weight: 500;
+}
+.se-i .content-box-ii p.info a {
+  color: var(--thYellow);
+  font-weight: 600;
+}
+.se-i .content-box-ii p.info a:hover {
+  color: var(--thYellow2);
+}
+/* ------------------------------- */
+
+/* -- :: Media Query */
+@media (max-width: 767.98px) {
+  /* -- :: Header */
+  header h1 {
+    font-size: 32px;
+  }
+}

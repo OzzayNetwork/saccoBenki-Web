@@ -1,0 +1,346 @@
+/* -- :: Header */
+header {
+  position: relative;
+  padding: 140px 0;
+  background: url(./../../../images/backgrounds/05.png) center no-repeat;
+  background-size: cover;
+}
+header h1 {
+  color: #fff;
+  font-size: 50px;
+  font-weight: 900;
+  line-height: 85px !important;
+}
+header p {
+  color: var(--thWhite3);
+  font-size: 17px;
+  line-height: 27px !important;
+}
+/* ------------------------------- */
+
+/* -- :: Section I */
+.se-i .table-body > li {
+  padding: 50px 20px;
+  border: 1px solid var(--thWhite3);
+  border-radius: 5px;
+  position: relative;
+  min-width: 340px;
+}
+.se-i .table-body > li.card-1 {
+  border-right-width: 0;
+  border-radius: 5px 0 0 5px;
+}
+.se-i .table-body > li.card-3 {
+  border-left-width: 0;
+  border-radius: 0 5px 5px 0;
+}
+.se-i .table-body .ribbon {
+  position: absolute;
+  color: #fff;
+  font-size: 14px;
+  padding: 7px 14px;
+  top: -20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: var(--thYellow);
+  border-radius: 2px;
+}
+/* card name */
+.se-i .table-body > li .card-name h3 {
+  font-size: 20px;
+  font-weight: 700;
+  height: 50px;
+  margin-bottom: 25px;
+  color: var(--thBlack)
+}
+/* offer */
+.se-i .table-body > li .offer {
+  margin-bottom: 25px;
+}
+.se-i .table-body > li .offer .old-price {
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 400;
+  color: #6c757d;
+  text-decoration: line-through;
+  margin-right: 5px;
+}
+.se-i .table-body > li .offer .save {
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+  background: var(--thBlue);
+  border-radius: 40px;
+  padding: 6px 12px;
+  opacity: .5;
+}
+/* card price */
+.se-i .table-body > li .card-price {
+  margin-bottom: 30px;
+}
+.se-i .table-body > li .card-price .currency {
+  font-size: 26px;
+  line-height: 42px;
+  font-weight: 700;
+  margin-top: 15px;
+  color: var(--thBlack);
+}
+.se-i .table-body > li .card-price .amount {
+  font-size: 84px;
+  line-height: 84px;
+  font-weight: 700;
+  color: var(--thBlack);
+}
+.se-i .table-body > li .card-price .duration {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+  color: var(--thBlack)
+}
+/* card features */
+.se-i .table-body > li .card-features {
+  margin-bottom: 25px;
+}
+.se-i .table-body > li .card-features li {
+  font-size: 16px;
+  line-height: 38px;
+}
+.se-i .table-body > li .card-features li i {
+  color: #91dc5a;
+  font-size: 20px;
+}
+/* hot card */
+.se-i .table-body .hot-card {
+  padding: 55px 20px 70px 20px;
+  border: 2px solid var(--thYellow);
+  background: rgba(249, 184, 81, 0.05);
+}
+.se-i .table-body > li.hot-card .offer .save {
+  background: var(--thYellow);
+}
+/* ------------------------------- */
+
+/* -- :: Section III */
+.se-iii .c-table table {
+  border: none;
+}
+/* H Table */
+.se-iii .h-table {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 70px;
+  background: #fff;
+}
+.se-iii .h-table thead tr td {
+  padding: 15px 20px;
+}
+/* Table Head */
+.se-iii .c-table thead tr th {
+  width: 35%;
+  text-align: left;
+  border: none;
+}
+.se-iii .c-table .h-table thead tr td {
+  border-top: 1px solid var(--thWhite2);
+  min-width: 135px;
+}
+.se-iii .c-table thead tr td:last-child {
+  border-right: 1px solid var(--thWhite2);
+}
+.se-iii .c-table thead tr td {
+  width: 18.25%;
+  font-weight: bold;
+  font-size: 20px;
+  color: var(--thBlack);
+  border: none;
+  border-left: 1px solid var(--thWhite2);
+  border-bottom: 1px solid var(--thWhite2);
+}
+.se-iii .c-table thead tr td .name {
+  margin-bottom: 15px;
+  display: block;
+  line-height: normal;
+  font-size: 16px;
+}
+.se-iii .c-table thead tr td button {
+  border-radius: 4px;
+  background: var(--thBlue);
+  padding: 8px 12px;
+  margin-top: 18px;
+  text-transform: capitalize;
+  border: 0;
+  font-size: 13px;
+  font-weight: 400;
+  cursor: pointer;
+  color: #fff;
+  -webkit-transition: background .2s ease;
+  transition: background .2s ease;
+}
+.se-iii .c-table thead tr td button:hover {
+  background: var(--thBlue2)
+}
+.se-iii .c-table thead tr td.hot button {
+  background: var(--thYellow);
+}
+.se-iii .c-table thead tr td.hot button:hover {
+  background: var(--thYellow2);
+}
+.se-iii .c-table .card-price .currency {
+  font-size: 15px;
+  line-height: 12px;
+  font-weight: 700;
+  margin-top: 7px;
+  color: var(--thBlack);
+}
+.se-iii .c-table .card-price .amount {
+  font-size: 40px;
+  line-height: 36px;
+  font-weight: 700;
+  color: var(--thBlack)
+}
+.se-iii .c-table .card-price .duration {
+  font-size: 14px;
+  line-height: 10px;
+  font-weight: 600;
+  align-self: flex-end;
+  color: var(--thBlack)
+}
+.se-iii .c-table th,
+.se-iii .c-table td {
+  padding: 25px;
+  vertical-align: middle;
+  text-align: center;
+  color: var(--thBlack);
+}
+.se-iii .c-table th i {
+  font-size: 10px;
+  color: #5d1e99;
+  opacity: 0.4;
+  cursor: help;
+}
+.se-iii .c-table td i {
+  font-size: 20px;
+  color: var(--thBlue);
+}
+/* Table Body */
+.se-iii .c-table tbody tr th {
+  border-left: none;
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--thBlack);
+  border-color: var(--thWhite2);
+}
+.se-iii .c-table tbody tr td {
+  border-right: none;
+  min-width: 135px;
+  font-size: 16px;
+  color: var(--thBlack);
+  border-color: var(--thWhite2);
+}
+.se-iii .c-table tbody tr td:last-child {
+  border-right: 1px solid var(--thWhite2);
+}
+/* ------------------------------- */
+
+/* -- :: Media Query */
+@media (max-width: 1199.98px) {
+  /* -- Section I */
+  .se-i .table-body > li {
+    padding: 40px 20px;
+    min-width: 33.333%;
+  }
+  .se-i .table-body > li .card-name h3 {
+    height: 20px;
+    font-size: 17px;
+  }
+  .se-i .table-body > li .offer {
+    margin-bottom: 20px;
+  }
+  .se-i .table-body > li .card-price .amount {
+    font-size: 74px;
+    line-height: 76px;
+  }
+  .se-i .table-body > li .card-price {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 991.98px) {
+  /* -- :: Header */
+  header {
+    padding: 70px 0;
+    background: -webkit-gradient(linear, left top, right top, from(var(--thBlue)), to(var(--thBlue2)));
+    background: linear-gradient(to right, var(--thBlue), var(--thBlue2));
+  }
+  header h1 {
+    font-size: 40px;
+    line-height: 74px !important;
+  }
+  /* -- Section I */
+  .se-i .table-body > li {
+    min-width: calc(50% - 15px);
+    margin-bottom: 30px;
+    box-shadow: 0 8px 16px rgba(47, 85, 212, .03);
+  }
+  .se-i .table-body > li.card-1 {
+    border-right-width: 1px;
+    border-radius: 5px;
+  }
+  .se-i .table-body > li.card-3 {
+    border-left-width: 1px;
+    border-radius: 5px;
+  }
+  .se-i .table-body .hot-card {
+    float: right;
+    padding: 40px 20px;
+  }
+  /* -- :: Section III */
+  .se-iii .c-table thead tr td {
+    width: 33.333%;
+  }
+  .se-iii .c-table tbody tr.bg-gray {
+    background: #f9fbfc;
+  }
+}
+@media (max-width: 767.98px) {
+  /* :: Header */
+  header h1 {
+    font-size: 32px;
+	  line-height: 51px !important;
+  }
+  /* -- :: Section I */
+  .se-i .table-body > li {
+    display: block;
+    width: 100%;
+    margin: 0 auto 30px;
+    float: none !important;
+  }
+  .se-i .table-body > li .card-name h3 {
+    font-size: 20px
+  }
+  /* -- :: Section III */
+  .se-iii .c-table thead tr td .name {
+    font-size: 18px;
+  }
+  .se-iii .c-table .card-price .amount {
+    font-size: 36px;
+    line-height: 30px;
+  }
+  .se-iii .c-table thead tr td button {
+    letter-spacing: 0;
+    margin-top: 18px;
+  }
+  .se-iii .h-table thead tr td {
+    padding: 10px 10px 15px;
+  }
+}
+@media (max-width: 575.98px) {
+  /* -- :: Section III */
+  .se-iii .c-table .h-table thead tr td,
+  .se-iii .c-table tbody tr td {
+    min-width: 160px;
+  }
+  .se-iii .c-table tbody tr td {
+    padding: 15px 0;
+  }
+}

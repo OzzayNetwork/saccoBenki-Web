@@ -1,0 +1,133 @@
+/* -- :: Form */
+main form {
+  background: #fff;
+  width: 480px;
+  padding: 70px 40px
+}
+main form > div {
+  width: 380px;
+}
+main form .logo img {
+  width: 90px;
+}
+main form .title h5 {
+  color: var(--thBlack);
+  font-weight: 900;
+  font-size: 26px;
+}
+main form .title p {
+  color: var(--thGray);
+  font-size: 14px;
+}
+main form .inputs .i-g input {
+  background: #fff;
+  padding: 12px 24px;
+  font-size: 14px;
+  border: 1px solid var(--thWhite2);
+  border-radius: 4px;
+  outline: none;
+  color: var(--thBlack);
+  font-weight: 500;
+}
+main form .inputs .i-g input::-webkit-input-placeholder {
+  color: var(--thWhite3);
+  font-weight: 400;
+}
+main form .inputs .i-g input::-moz-placeholder {
+  color: var(--thWhite3);
+  font-weight: 400;
+}
+main form .inputs .i-g input:-ms-input-placeholder {
+  color: var(--thWhite3);
+  font-weight: 400;
+}
+main form .inputs .i-g input::-ms-input-placeholder {
+  color: var(--thWhite3);
+  font-weight: 400;
+}
+main form .inputs .i-g input::placeholder {
+  color: var(--thWhite3);
+  font-weight: 400;
+}
+main form .inputs .i-g input:focus {
+  border-color: var(--thWhite3);
+}
+main form .inputs .custom-checkbox label {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.8;
+}
+main form .inputs .custom-control-label::before {
+  background: #fff;
+  border: 1px solid var(--thWhite2);
+}
+main form .inputs a.link {
+  font-size: 14px;
+  color: var(--thWhite3);
+  -webkit-transition: color .25s ease-in-out;
+  transition: color .25s ease-in-out;
+}
+main form .inputs a.link span {
+  font-weight: 600;
+}
+main form .inputs a.link:hover {
+  color: var(--thBlack);
+}
+main form .inputs span.line {
+  color: var(--thGray2);
+  font-size: 16px;
+}
+main form .inputs span.line::before,
+main form .inputs span.line::after {
+  position: absolute;
+  content: '';
+  height: 1px;
+  width: 32%;
+  background: var(--thWhite2);
+}
+main form .inputs span.line::before {
+  left: 0;
+}
+main form .inputs span.line::after {
+  right: 0;
+}
+main form .inputs p.comment {
+  font-size: 14px;
+  color: var(--thGray);
+}
+main form .inputs p.comment a {
+  color: var(--thBlue);
+}
+main form .inputs p.comment a:hover {
+  color: var(--thBlue2);
+  text-decoration: underline !important;
+}
+main form .social a.social-btn-2  {
+  background: #4267B2;
+  color: #fff;
+  font-weight: 400;
+  border: 1px solid #4267B2;
+}
+main form .social a.social-btn-2 i {
+  font-size: 17px;
+}
+main form .social a.social-btn-2:hover {
+  background: #263c68;
+  border-color: #263c68;
+}
+main form .social a.social-btn-2:active  {
+  background: #4267B2;
+  border-color: #4267B2;
+}
+/* ------------------------------- */
+
+/* -- :: Media Query */
+@media (max-width: 767.98px) {
+  main form {
+    padding: 40px 0;
+  }
+  main form > div {
+    width: auto;
+  }
+}
+/* ------------------------------- */
