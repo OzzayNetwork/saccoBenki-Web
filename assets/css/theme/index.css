@@ -2,10 +2,14 @@
 header {
   position: relative;
   padding: 140px 0;
-  background: url(./../../images/backgrounds/03.png);
+  background: url(./../../images/webImages/landingImg.png);
   background-position: center center;
 	background-size: cover;
-	background-repeat: no-repeat;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+    background-position: right bottom;
+    background-blend-mode: screen;
+    background-color: rgb(248 249 250 / 69%);
 }
 header h1 {
   color: var(--thBlack);
@@ -385,4 +389,23 @@ header ul.social-links a:hover {
   .se-iv .item a {
     font-size: 14px;
   }
+}
+
+.home-section-2 span i{
+  font-size: 60px;
+  margin-bottom: 0.5rem;
+  color: #ff3301;
+}
+.text-primary{
+  color: #ff3301 !important;
+}
+.features-row{
+  position: relative;
+}
+.features-row::after{
+  content: "";
+  position: absolute;
+  left: 0px;
+  height: 50%;
+  background: red;
 }
