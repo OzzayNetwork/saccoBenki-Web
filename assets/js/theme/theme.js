@@ -165,6 +165,20 @@
 	setInterval(function(){
 		alternateScreen();
 		// console.log(1+1);
-	}, 5000);
+  }, 5000);
+  
 
+  // scrolling
+
+  
 }(jQuery));
+$(document).ready(function(){
+  // alert("we giood");
+  $('#contacts').localScroll();
+  $('#billing').localScroll();
+  $('#modules').localScroll();
+  $('#monitoring').localScroll();
+  $('#sacco-benefits').localScroll();
+  $('#features').localScroll();
+  $('#home').localScroll();
+});
