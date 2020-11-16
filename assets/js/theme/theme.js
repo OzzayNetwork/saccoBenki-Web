@@ -51,4 +51,120 @@
     
   });
 
+  //loan calculator
+
+  function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+
+  loanCalculator();
+  function loanCalculator(){
+    var amount=$('.loanAmount').val();
+    var rate=$('.loanRate').val();
+    var months=$('.loanMonths').val();
+    var totalLoan=0;
+    var monthlyPay=0;
+
+    monthlyPay=(amount*months*rate)/100;
+    totalLoan=monthlyPay*months;
+
+    $('.totalLoan').text(numberWithCommas(totalLoan)+'.00');
+    $('.monthlyPay').text(numberWithCommas(monthlyPay)+'.00');
+  }
+  $('.loanCalculator input').on('change', function(){
+    loanCalculator(); 
+  });
+
+  $('.loanCalculator input').on('keyup', function(){
+    loanCalculator(); 
+  });
+
+  $('.loanCalculator input').on('keydown', function(){
+    loanCalculator(); 
+  });
+
+  //alternating scenes
+	var numberOfScreens=0;
+	$('#billing .tab-content .tab-pane').each(function(index){
+		// alert(index);
+		numberOfScreens=index
+
+	});
+	var numberOfScreenChangers=0;
+	$('#billing  li').each(function(index){
+		// alert(index);
+		numberOfScreenChangers=index
+
+	});
+	
+	
+	function alternateScreen(){
+		console.log("running");
+		$('#billing .tab-content .tab-pane').each(function(index) {
+			// alert(numberOfScreens);
+			var tab_index=$(this).index();
+			var isactive=$(this).hasClass('active');
+	
+			if(index==numberOfScreens){
+				// alert("we are here");
+				if(isactive==true){
+					$('#billing .tab-content .tab-pane').eq(0).addClass('active');
+					$('#billing  li').removeClass('active');
+					$('#billing  li').eq(0).addClass('active');
+					
+					$(this).removeClass("active");
+				}
+				return false;
+			}
+	
+			if(isactive==true){
+				if(index!==numberOfScreens){
+					// alert("we can change");
+					// $(this).removeClass("active").next().addClass("active");
+	
+					$('#billing li').removeClass('active');
+					$('#billing  li').eq(index+1).addClass('active');
+					
+					
+					$(this).next().addClass("active");
+					$(this).removeClass("active");
+					
+				}
+				return false;
+			}
+			
+			
+		  });
+	}
+
+	$('#billing li').on('click', function(){
+		var the_index=$(this).index();
+		// alert(the_index);
+		$('#billing  li').removeClass('active');
+		$(this).addClass('active');
+
+		$('#billing .tab-content .tab-pane').removeClass('active');
+		$('#billing .tab-content .tab-pane').eq(the_index).addClass('active');
+	
+
+	});
+
+	$('#billing li').on('click', function(){
+		var the_index=$(this).index()+3;
+		//  alert(the_index);
+		$('#billing  li').removeClass('active');
+		$(this).addClass('active');
+
+		$('#billing .tab-content .tab-pane').removeClass('active');
+		$('#billing .tab-content .tab-pane').eq(the_index).addClass('active');
+	
+
+	});
+
+	// var timer = setInterval(alternateScreen(), 4000);
+	setInterval(function(){
+		alternateScreen();
+		// console.log(1+1);
+	}, 5000);
+
 }(jQuery));

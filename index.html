@@ -1,22 +1,15 @@
-<!--
-  Template Name   : VRocket - Hostfly | The Multi-Purpose HTML5 Template
-  Author          : Nifty Theme - Osama Bakri
-  ThemeForest     : https://themeforest.net/user/niftytheme
-  Contact         : niftytheme@gmail.com
-  Created         : 30 September 2019
-  License         : You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
--->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <!-- :: Meta -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="VRocket for hosting services">
-  <meta name="author" content="Nifty Theme | Osama Bakri">
+  <meta name="description" content="Sacco's solution">
+  <meta name="author" content="Nouveta LTD | Nouveta">
   <meta name="msapplication-tap-highlight" content="no">
   <meta name="theme-color" content="#0635c9">
-  <meta name="keywords" content="VRocket">
+  <meta name="keywords" content="Sacco Benki">
   <!-- icons -->
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@5.8.55/css/materialdesignicons.min.css">
@@ -25,10 +18,79 @@
   <link rel="stylesheet" href="./assets/css/lib/font-awesome.min.css">
   <link rel="stylesheet" href="./assets/css/theme/style.css">
   <link rel="stylesheet" href="./assets/css/theme/index.css">
-  <link rel="shortcut icon" href="#" type="image/x-icon">
-  <title>VRocket</title>
+  <link rel="stylesheet" href="./assets/css/lib/ionicons.min.css">
+
+  <link rel="shortcut icon" href="assets/images/logos/icon_3.png" type="image/x-icon">
+  <title>Sacco Benki</title>
 </head>
 <body>
+
+  <!-- modals -->
+  <div class="modal fade" id="loanCalculator" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title" id="exampleModalLongTitle">Loan Calculator</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" class="text-color"><i class="mdi mdi-close text-white"></i></span>
+          </button>
+        </div>
+        <div class="modal-body pt-0 mt-0">
+          <div class="row bg-2 mb-4 pt-3">
+            <div class="col-sm-12 font-12">
+              <p>
+                The Sacco Benki Loan calculator can help you ascertain how much you might be able to borrow and what your repayments would be.
+              </p>
+              <p>
+                Start calculating your loan amount now and if you like what you see we can help you register with one of our member Sacco and get you going.
+              </p>
+            </div>
+          </div>
+          <div class="row loanCalculator">
+            
+            <div class="col-sm-12 col-md-12">
+              <div class="form-group">
+                <label>Loan amount in KES</label>
+                <input type="text" class="form-control loanAmount" placeholder="Enter Amount">
+              </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6">
+              <div class="form-group">
+                <label>Term in Months</label>
+                <input type="text" class="form-control loanMonths" placeholder="Enter Number of Months">
+              </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6">
+              <div class="form-group">
+                <label>Loan rate (%)</label>
+                <input type="text" class="form-control loanRate" placeholder="Enter Rate">
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="modal-footer features-row text-white">
+          <div class="col-12">
+            <div class="row">
+              <div class="col-md-6 col-sm-12 px-0">
+                <small class="text-lighter">Monthly Repayment (Kes)</small>
+                <h5 class="monthlyPay">0.00</h5>
+              </div>
+  
+              <div class="col-md-6 col-sm-12 px-0">
+              <small class="text-lighter">Total Amount Repayable (Kes)</small>
+              <h5 class="totalLoan">0.00</h5>
+            </div>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end of my modals -->
 
   <!-- :: Navbar -->
   <nav class="th-nav-st1">
@@ -46,56 +108,58 @@
           <li class="th-nav-item position-relative">
             <a href="#" class="position-relative d-flex align-items-center justify-content-lg-center justify-content-between text-capitalize">home</a>
           </li>
+          <li class="th-nav-item position-relative">
+            <a href="#" class="position-relative d-flex align-items-center justify-content-lg-center justify-content-between text-capitalize">Benefits</a>
+          </li>
 
           <!-- nav item has dropdown -->
-          <li class="th-nav-item has-dropdown position-relative">
-            <a href="#" onclick="return false;" class="position-relative d-flex align-items-center justify-content-lg-center justify-content-between text-capitalize">pages</a>
+          <li class="th-nav-item has-dropdown position-relative d-none">
+            <a href="#" onclick="return false;" class="position-relative d-flex align-items-center justify-content-lg-center justify-content-between text-capitalize">Benefits</a>
             <!-- dropdown list -->
             <ul class="th-dropdown-list list-unstyled mb-0">
               <li class="th-dropdown-item">
-                <a href="./pages/shared.html" class="position-relative d-flex align-items-center justify-content-between text-capitalize">shared hosting</a>
+                <a href="#" class="position-relative d-flex align-items-center justify-content-between text-capitalize">Modules</a>
               </li>
               <li class="th-dropdown-item">
-                <a href="./pages/cloud.html" class="position-relative d-flex align-items-center justify-content-between text-capitalize">Cloud hosting</a>
+                <a href="#" class="position-relative d-flex align-items-center justify-content-between text-capitalize">Cloud hosting</a>
               </li>
               <li class="th-dropdown-item">
-                <a href="./pages/vps.html" class="position-relative d-flex align-items-center justify-content-between text-capitalize">VPS hosting</a>
+                <a href="#" class="position-relative d-flex align-items-center justify-content-between text-capitalize">Contacts</a>
               </li>
             </ul>
           </li>
 
           <!-- nav item has dropdown -->
           <li class="th-nav-item has-dropdown position-relative">
-            <a href="#" onclick="return false;" class="position-relative d-flex align-items-center justify-content-lg-center justify-content-between text-capitalize">comapny</a>
+            <a href="#" onclick="return false;" class="position-relative d-flex align-items-center justify-content-lg-center justify-content-between text-capitalize">Modules</a>
             <!-- dropdown list -->
             <ul class="th-dropdown-list list-unstyled mb-0">
               <li class="th-dropdown-item">
-                <a href="./pages/terms.html" class="position-relative d-flex align-items-center justify-content-between text-capitalize">terms &amp; conditions</a>
+                <a href="#" class="position-relative d-flex align-items-center justify-content-between text-capitalize">Monitoring</a>
               </li>
               <li class="th-dropdown-item">
-                <a href="./pages/login.html" class="position-relative d-flex align-items-center justify-content-between text-capitalize">login page</a>
+                <a href="#" class="position-relative d-flex align-items-center justify-content-between text-capitalize">Customer App</a>
               </li>
-              <li class="th-dropdown-item">
-                <a href="./pages/register.html" class="position-relative d-flex align-items-center justify-content-between text-capitalize">regsiter page</a>
-              </li>
+              
             </ul>
           </li>
 
           <!-- nav item -->
           <li class="th-nav-item position-relative">
-            <a href="./pages/about-us.html" class="position-relative d-flex align-items-center justify-content-lg-center justify-content-between text-capitalize">about us</a>
+            <a href="#" class="position-relative d-flex align-items-center justify-content-lg-center justify-content-between text-capitalize">Contacts</a>
           </li>
 
           <!-- nav item -->
-          <li class="th-nav-item position-relative">
-            <a href="./pages/help.html" class="position-relative d-flex align-items-center justify-content-lg-center justify-content-between text-capitalize">support</a>
+          <li class="th-nav-item position-relative d-none">
+            <a href="#" class="position-relative d-flex align-items-center justify-content-lg-center justify-content-between text-capitalize">support</a>
           </li>
 
           <!-- nav item -->
           <li class="th-nav-item user-item position-relative">
-            <a href="./pages/login.html" class="position-relative d-flex align-items-center justify-content-lg-center justify-content-between text-capitalize">
-              <i class="fa fa-user-o mr-2 d-lg-inline-flex d-none"></i>
-              <span class="d-inline-flex text-capitalize">login</span>
+            <button class="th-btn th-btn-outline-primary mx-2 my-2" data-toggle="modal" data-target="#loanCalculator"><i class="mdi mdi-calculator mr-2"></i> Loan Calculator</button>
+            <a href="./pages/login.html" class="d-none position-relative d-flex align-items-center justify-content-lg-center justify-content-between text-capitalize">
+              <i class="mdi mdi-calculator mr-2 d-lg-inline-flex"></i>
+              <span class="d-inline-flex text-capitalize">Loan Calculator</span>
             </a>
           </li>
 
@@ -124,11 +188,11 @@
           <div class="d-flex flex-wrap align-items-center justify-content-lg-start justify-content-center">
             <a href="#" class="th-btn th-btn-fill-primary mx-2 my-2">
               <i class="fa fa-search mr-2"></i>
-              Find Your Domain
+              Book Demo
             </a>
             <a href="#" class="th-btn th-btn-outline-primary mx-2 my-2">
               <i class="fa fa-diamond mr-2"></i>
-              Our Pricing
+              Contact Us
             </a>
           </div>
         </div>
@@ -324,254 +388,27 @@ Reduce on paperwork
       </div>
     </div>
 
-    <!-- :: Section II -->
-    <div class="se-ii py-80 bg-2">
-      <div class="container">
-        <!-- head -->
-        <div class="section-head">
-          <h5 class="mb-0">What about our plans</h5>
-          <h2 class="my-3">Get More Power With Our Web Hosting Products</h2>
-          <p class="mb-0 mx-auto">Our custom-built servers and 24/7 team of experts deliver breakthrough performance that grows with you.</p>
-        </div>
-        <!-- row -->
-        <div class="row child-mb-2">
-          <!-- col -->
-          <div class="col-lg-4 col-md-12 mb-lg-0">
-            <!-- plan -->
-            <div class="plan text-center">
-              <!-- plan name -->
-              <h4 class="name mb-4 text-uppercase">Starter</h4>
-              <!-- plan price -->
-              <h3 class="price mb-4">$50</h3>
-              <!-- plann features -->
-              <ul class="plan-features list-unstyled mb-0">
-                <li class="p-2 mx-auto">
-                  <span class="title text-uppercase d-block">hard driver</span>
-                  <span class="des text-uppercase d-block">160 GB sata</span>
-                </li>
-                <li class="p-2 mx-auto">
-                  <span class="title text-uppercase d-block">ram</span>
-                  <span class="des text-uppercase d-block">4 GB ddr-3</span>
-                </li>
-                <li class="p-2 mx-auto">
-                  <span class="title text-uppercase d-block">OS</span>
-                  <span class="des text-uppercase d-block">Windows/Linux</span>
-                </li>
-                <li class="p-2 mx-auto">
-                  <span class="title text-uppercase d-block">IP'S</span>
-                  <span class="des text-uppercase d-block">1 dedicated IP</span>
-                </li>
-                <li class="p-2 mx-auto">
-                  <span class="title text-uppercase d-block">IP'S</span>
-                  <span class="des text-uppercase d-block">1 usable IP</span>
-                </li>
-                <li class="p-2 mx-auto">
-                  <span class="title text-uppercase d-block">bandwidth</span>
-                  <span class="des text-uppercase d-block">300 GB</span>
-                </li>
-              </ul>
-              <!-- order button -->
-              <div class="btn-c pt-4 px-4">
-                <a href="#" class="th-btn th-btn-outline-primary w-75 text-uppercase">order now</a>
-              </div>
-            </div>
-          </div>
-          <!-- col -->
-          <div class="col-lg-4 col-md-12 mb-lg-0">
-            <!-- plan -->
-            <div class="plan hot text-center">
-              <!-- plan name -->
-              <h4 class="name mb-4 text-uppercase">Basic</h4>
-              <!-- plan price -->
-              <h3 class="price mb-4">$80</h3>
-              <!-- plann features -->
-              <ul class="plan-features list-unstyled mb-0">
-                <li class="p-2 mx-auto">
-                  <span class="title text-uppercase d-block">hard driver</span>
-                  <span class="des text-uppercase d-block">320 GB sata</span>
-                </li>
-                <li class="p-2 mx-auto">
-                  <span class="title text-uppercase d-block">ram</span>
-                  <span class="des text-uppercase d-block">6 GB ddr-3</span>
-                </li>
-                <li class="p-2 mx-auto">
-                  <span class="title text-uppercase d-block">OS</span>
-                  <span class="des text-uppercase d-block">Windows/Linux</span>
-                </li>
-                <li class="p-2 mx-auto">
-                  <span class="title text-uppercase d-block">IP'S</span>
-                  <span class="des text-uppercase d-block">2 dedicated IP</span>
-                </li>
-                <li class="p-2 mx-auto">
-                  <span class="title text-uppercase d-block">IP'S</span>
-                  <span class="des text-uppercase d-block">2 usable IP</span>
-                </li>
-                <li class="p-2 mx-auto">
-                  <span class="title text-uppercase d-block">bandwidth</span>
-                  <span class="des text-uppercase d-block">500 GB</span>
-                </li>
-              </ul>
-              <!-- order button -->
-              <div class="btn-c pt-4 px-4">
-                <a href="#" class="th-btn th-btn-outline-primary w-75 text-uppercase">order now</a>              </div>
-            </div>
-          </div>
-          <!-- col -->
-          <div class="col-lg-4 col-md-12 mb-0">
-            <!-- plan -->
-            <div class="plan text-center">
-              <!-- plan name -->
-              <h4 class="name mb-4 text-uppercase">Premium</h4>
-              <!-- plan price -->
-              <h3 class="price mb-4">$120</h3>
-              <!-- plann features -->
-              <ul class="plan-features list-unstyled mb-0">
-                <li class="p-2 mx-auto">
-                  <span class="title text-uppercase d-block">hard driver</span>
-                  <span class="des text-uppercase d-block">500 GB sata</span>
-                </li>
-                <li class="p-2 mx-auto">
-                  <span class="title text-uppercase d-block">ram</span>
-                  <span class="des text-uppercase d-block">8 GB ddr-3</span>
-                </li>
-                <li class="p-2 mx-auto">
-                  <span class="title text-uppercase d-block">OS</span>
-                  <span class="des text-uppercase d-block">Windows/Linux</span>
-                </li>
-                <li class="p-2 mx-auto">
-                  <span class="title text-uppercase d-block">IP'S</span>
-                  <span class="des text-uppercase d-block">4 dedicated IP</span>
-                </li>
-                <li class="p-2 mx-auto">
-                  <span class="title text-uppercase d-block">IP'S</span>
-                  <span class="des text-uppercase d-block">4 usable IP</span>
-                </li>
-                <li class="p-2 mx-auto">
-                  <span class="title text-uppercase d-block">bandwidth</span>
-                  <span class="des text-uppercase d-block">1000 GB</span>
-                </li>
-              </ul>
-              <!-- order button -->
-              <div class="btn-c pt-4 px-4">
-                <a href="#" class="th-btn th-btn-outline-primary w-75 text-uppercase">order now</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- :: Section III -->
-    <div class="se-iii py-80">
-      <div class="container">
-        <!-- row -->
-        <div class="row">
-          <!-- col -->
-          <div class="col-xl-6">
-            <!-- head -->
-            <div class="section-head text-xl-left mb-xl-0">
-              <h5 class="mb-0">Why Choose VRocket</h5>
-              <h2 class="my-3">Inspired design for the digital age</h2>
-              <p class="mb-0 mx-auto">
-                Anytime anywhere philosophy of services can be adopted. As your partner, our platform will offer you the much needed <strong>"CVVA"</strong> features.
-              </p>
-              <a href="#" class="th-btn th-btn-outline-primary mt-5">Read more</a>
-            </div>
-          </div>
-          <!-- col -->
-          <div class="col-xl-6">
-            <!-- row -->
-            <div class="row child-mb-2 justify-content-center">
-              <!-- col -->
-              <div class="col-xl-4 col-md-3 col-sm-4 col-6 text-center">
-                <!-- box -->
-                <div class="box has-sm-shadow">
-                  <img src="./assets/images/icons/style-02/email-ser.svg" class="img-fluid mb-3" alt="image">
-                  <h5 class="name">Email</h5>
-                </div>
-              </div>
-              <!-- col -->
-              <div class="col-xl-4 col-md-3 col-sm-4 col-6 text-center">
-                <!-- box -->
-                <div class="box has-sm-shadow">
-                  <img src="./assets/images/icons/style-02/dowload.svg" class="img-fluid mb-3" alt="image">
-                  <h5 class="name">Free Cloud</h5>
-                </div>
-              </div>
-              <!-- col -->
-              <div class="col-xl-4 col-md-3 col-sm-4 col-6 text-center">
-                <!-- box -->
-                <div class="box has-sm-shadow">
-                  <img src="./assets/images/icons/style-02/kid.svg" class="img-fluid mb-3" alt="image">
-                  <h5 class="name">Branding</h5>
-                </div>
-              </div>
-              <!-- col -->
-              <div class="col-xl-4 col-md-3 col-sm-4 col-6 mb-sm-0 text-center">
-                <!-- box -->
-                <div class="box has-sm-shadow">
-                  <img src="./assets/images/icons/style-02/maintenance.svg" class="img-fluid mb-3" alt="image">
-                  <h5 class="name">Support</h5>
-                </div>
-              </div>
-              <!-- col -->
-              <div class="col-xl-4 col-md-3 col-sm-4 col-6 mb-0 text-center">
-                <!-- box -->
-                <div class="box has-sm-shadow">
-                  <img src="./assets/images/icons/style-02/music-player.svg" class="img-fluid mb-3" alt="image">
-                  <h5 class="name">C-Panel</h5>
-                </div>
-              </div>
-              <!-- col -->
-              <div class="col-xl-4 col-md-3 col-sm-4 col-6 mb-0 text-center">
-                <!-- box -->
-                <div class="box has-sm-shadow">
-                  <img src="./assets/images/icons/style-02/trophy.svg" class="img-fluid mb-3" alt="image">
-                  <h5 class="name">Security</h5>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <!-- :: Features Row -->
     <div class="features-row">
       <div class="container">
         <!-- row -->
         <div class="row">
           <!-- col -->
-          <div class="col-xl-4 col-md-6 text-md-left text-center">
+          <div class="col-sm-12 col-md-8 text-md-left text-center">
             <!-- item -->
             <div class="item pt-5 pb-xl-5">
-              <h5 class="name mb-3">Level Up!</h5>
-              <p class="mb-0">It’s hard to believe anyone would want to harm your website, but they do. Thankfully, our security team is on the job 24/7 to meticulously monitor.</p>
+              <h5 class="name mb-3">Monitoring</h5>
+              
+              <p class="mb-0"> Anytime anywhere philosophy of services can be adopted. As your partner, our platform will offer you the much needed <strong>"CVVA"</strong> features.</p>
             </div>
           </div>
-          <!-- col -->
-          <div class="col-xl-4 col-md-6 text-md-left text-center">
-            <!-- item -->
-            <div class="item pt-md-5 pt-4 pb-xl-5">
-              <h5 class="name mb-3">Award-winning security</h5>
-              <p class="mb-0">It’s hard to believe anyone would want to harm your website, but they do. Thankfully, our security team is on the job 24/7 to meticulously monitor.</p>
-            </div>
-          </div>
-          <!-- col -->
-          <div class="col-xl-4 col-md-6 text-md-left text-center">
-            <!-- item -->
-            <div class="item pt-xl-5 pt-4 pb-5">
-              <h5 class="name mb-3">Email Service</h5>
-              <p class="mb-0">It’s hard to believe anyone would want to harm your website, but they do. Thankfully, our security team is on the job 24/7 to meticulously monitor.</p>
-            </div>
-          </div>
+         
         </div>
       </div>
     </div>
 
-    <!-- :: Section IV -->
-   <!-- :: Partners -->
-	<div class="partners py-80">
+     <!-- :: Partners -->
+	<div class="partners py-80 bg-2">
 		<div class="container">
 			<!-- section head -->
 			<div class="section-head text-center">
@@ -692,277 +529,210 @@ enables you to tell the story of your performance through charts and graphs and 
 		</div>
 	</div>
 
-	<!-- :: Why Us -->
-	<div class="why-us py-80 bg-2">
-		<div class="container">
-			<!-- section head -->
-			<div class="section-head text-center">
-				<h3 class="mb-3">Why Choose Us</h3>
-				<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking
-					at its layout.</p>
-			</div>
-			<!-- row -->
-			<div class="row align-items-end">
-				<!-- col -->
-				<div class="col-lg-4 col-md-6 col-12">
-					<!-- box -->
-					<div class="service-box d-flex align-items-start justify-content-start mb-30">
-						<!-- icon -->
-						<div class="icon">
-							<i class="fa fa-gear d-flex align-items-center justify-content-center"></i>
-						</div>
-						<!-- text contain -->
-						<div class="t-c text-md-left text-center">
-							<h4 class="mb-3 text-uppercase">SEO Marketing</h4>
-							<p class="mb-0">Globally incubate standards compliant channels before scalable benefits. Quickly
-								disseminate superior del</p>
-						</div>
-					</div>
-					<!-- box -->
-					<div class="service-box d-flex align-items-start justify-content-start mb-30">
-						<!-- icon -->
-						<div class="icon">
-							<i class="fa fa-bell-o d-flex align-items-center justify-content-center"></i>
-						</div>
-						<!-- text contain -->
-						<div class="t-c text-md-left text-center">
-							<h4 class="mb-3 text-uppercase">Product Branding</h4>
-							<p class="mb-0">Globally incubate standards compliant channels before scalable benefits. Quickly
-								disseminate superior del</p>
-						</div>
-					</div>
-					<!-- box -->
-					<div class="service-box d-flex align-items-start justify-content-start mb-md-0 mb-30">
-						<!-- icon -->
-						<div class="icon">
-							<i class="fa fa-binoculars d-flex align-items-center justify-content-center"></i>
-						</div>
-						<!-- text contain -->
-						<div class="t-c text-md-left text-center">
-							<h4 class="mb-3 text-uppercase">Email Marketing</h4>
-							<p class="mb-0">Globally incubate standards compliant channels before scalable benefits. Quickly
-								disseminate superior del</p>
-						</div>
-					</div>
-				</div>
-				<!-- col -->
-				<div class="col-lg-4 col-md-6 col-12 d-lg-flex d-none">
-					<div class="why-choose-banner">
-						<img src="./assets/images/users/man-6.png" class="img-fluid" alt="">
-					</div>
-				</div>
-				<!-- col -->
-				<div class="col-lg-4 col-md-6 col-12">
-					<!-- box -->
-					<div class="service-box d-flex align-items-start justify-content-start mb-30">
-						<!-- icon -->
-						<div class="icon">
-							<i class="fa fa-camera d-flex align-items-center justify-content-center"></i>
-						</div>
-						<!-- text contain -->
-						<div class="t-c text-md-left text-center">
-							<h4 class="mb-3 text-uppercase">Site Optimization</h4>
-							<p class="mb-0">Globally incubate standards compliant channels before scalable benefits. Quickly
-								disseminate superior del</p>
-						</div>
-					</div>
-					<!-- box -->
-					<div class="service-box d-flex align-items-start justify-content-start mb-30">
-						<!-- icon -->
-						<div class="icon">
-							<i class="fa fa-bullhorn d-flex align-items-center justify-content-center"></i>
-						</div>
-						<!-- text contain -->
-						<div class="t-c text-md-left text-center">
-							<h4 class="mb-3 text-uppercase">Pay Per Click</h4>
-							<p class="mb-0">Globally incubate standards compliant channels before scalable benefits. Quickly
-								disseminate superior del</p>
-						</div>
-					</div>
-					<!-- box -->
-					<div class="service-box d-flex align-items-start justify-content-start mb-0">
-						<!-- icon -->
-						<div class="icon">
-							<i class="fa fa-circle-o d-flex align-items-center justify-content-center"></i>
-						</div>
-						<!-- text contain -->
-						<div class="t-c text-md-left text-center">
-							<h4 class="mb-3 text-uppercase">Logo Branding</h4>
-							<p class="mb-0">Globally incubate standards compliant channels before scalable benefits. Quickly
-								disseminate superior del</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+    
+
+    
+
+    
+
+    
+
+    <!-- :: Section IV -->
+    <!-- :: Section III -->
+    <div class="se-iii py-80 bg-2">
+      <div class="container">
+        <!-- row -->
+        <div class="row">
+          <!-- col -->
+          <div class="col-xl-6">
+            <!-- head -->
+            <div class="section-head text-xl-left mb-xl-0">
+              <h5 class="mb-0">Sacco Benki Modules</h5>
+              <h2 class="my-3">Monitoring</h2>
+              <p class="font-13">  Teams in the Executive, Risk & Assurance, Operations, Credit, Quality management et al need the dashboard to monitor these & other KPI(s)</p>
+              <p class="mb-0 mx-auto font-13">
+                It’s vital to monitor KPI (Key Performance Indicators) against the realized progress towards a strategic objective.
+              
+
+              </p>
+              <a href="#" class="th-btn th-btn-outline-primary mt-5">Read more</a>
+            </div>
+          </div>
+          <!-- col -->
+          <div class="col-xl-6">
+            <!-- row -->
+            <div class="row child-mb-2 justify-content-center">
+              <!-- col -->
+              <div class="col-xl-4 col-md-3 col-sm-4 col-6 text-center">
+                <!-- box -->
+                <div class="box has-sm-shadow">
+                  <img src="./assets/images/icons/style-02/email-ser.svg" class="img-fluid mb-3" alt="image">
+                  <h5 class="name">Loan growth</h5>
+                </div>
+              </div>
+              <!-- col -->
+              <div class="col-xl-4 col-md-3 col-sm-4 col-6 text-center">
+                <!-- box -->
+                <div class="box has-sm-shadow">
+                  <img src="./assets/images/icons/style-02/dowload.svg" class="img-fluid mb-3" alt="image">
+                  <h5 class="name">Delinquency</h5>
+                </div>
+              </div>
+              <!-- col -->
+              <div class="col-xl-4 col-md-3 col-sm-4 col-6 text-center">
+                <!-- box -->
+                <div class="box has-sm-shadow">
+                  <img src="./assets/images/icons/style-02/kid.svg" class="img-fluid mb-3" alt="image">
+                  <h5 class="name">Compliance & Risks</h5>
+                </div>
+              </div>
+              <!-- col -->
+              <div class="col-xl-4 col-md-3 col-sm-4 col-6 mb-sm-0 text-center">
+                <!-- box -->
+                <div class="box has-sm-shadow">
+                  <img src="./assets/images/icons/style-02/maintenance.svg" class="img-fluid mb-3" alt="image">
+                  <h5 class="name">Interest Income</h5>
+                </div>
+              </div>
+              <!-- col -->
+              <div class="col-xl-4 col-md-3 col-sm-4 col-6 mb-0 text-center">
+                <!-- box -->
+                <div class="box has-sm-shadow">
+                  <img src="./assets/images/icons/style-02/music-player.svg" class="img-fluid mb-3" alt="image">
+                  <h5 class="name">Number of customers</h5>
+                </div>
+              </div>
+              <!-- col -->
+              <div class="col-xl-4 col-md-3 col-sm-4 col-6 mb-0 text-center">
+                <!-- box -->
+                <div class="box has-sm-shadow">
+                  <img src="./assets/images/icons/style-02/trophy.svg" class="img-fluid mb-3" alt="image">
+                  <h5 class="name">Portfolios</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
 
     <!-- :: Section VI -->
-    <div class="se-vi py-80">
-      <div class="container">
-        <!-- head -->
-        <div class="section-head">
-          <h5 class="mb-0">Meet Our Team</h5>
-          <h2 class="my-3">Get to know our leadership</h2>
-          <p class="mb-0 mx-auto">Our virtual private servers are built from the ground using all SSD storage. Enjoy increased power, flexibility, and control for your websites.</p>
-        </div>
-        <!-- row -->
-        <div class="row child-mb-2">
-          <!-- col -->
-          <div class="col-xl-3 col-lg-4 col-md-6 mb-xl-0">
-            <!-- item -->
-            <div class="item has-sm-shadow">
-              <div class="img-c position-relative">
-                <img src="./assets/images/char/01.jpg" class="img-fluid" alt="image">
-                <div class="position-absolute">
-                  <h4 class="f-name mb-0">Osama</h4>
-                  <h5 class="l-name mb-0">Bakri</h5>
-                </div>
-              </div>
-              <div class="info position-relative">
-                <h6 class="mb-2">Co-Founder</h6>
-                <p class="mb-0">Member, Private Equity & Co-Head of Technology, KKR</p>
-                <div class="icon has-sm-shadow position-absolute d-flex align-items-center justify-content-center">
-                  <img src="./assets/images/icons/style-02/manager.svg" class="img-fluid" alt="image">
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- col -->
-          <div class="col-xl-3 col-lg-4 col-md-6 mb-xl-0">
-            <!-- item -->
-            <div class="item has-sm-shadow">
-              <div class="img-c position-relative">
-                <img src="./assets/images/char/02.jpg" class="img-fluid" alt="image">
-                <div class="position-absolute">
-                  <h4 class="f-name mb-0">Khalid</h4>
-                  <h5 class="l-name mb-0">Hossam</h5>
-                </div>
-              </div>
-              <div class="info position-relative">
-                <h6 class="mb-2">Designer</h6>
-                <p class="mb-0">Member, Private Equity & Co-Head of Technology, KKR</p>
-                <div class="icon has-sm-shadow position-absolute d-flex align-items-center justify-content-center">
-                  <img src="./assets/images/icons/style-02/designer.svg" class="img-fluid" alt="image">
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- col -->
-          <div class="col-xl-3 col-lg-4 col-md-6 mb-md-0">
-            <!-- item -->
-            <div class="item has-sm-shadow">
-              <div class="img-c position-relative">
-                <img src="./assets/images/char/04.jpg" class="img-fluid" alt="image">
-                <div class="position-absolute">
-                  <h4 class="f-name mb-0">Tamer</h4>
-                  <h5 class="l-name mb-0">Kareem</h5>
-                </div>
-              </div>
-              <div class="info position-relative">
-                <h6 class="mb-2">Developer</h6>
-                <p class="mb-0">Member, Private Equity & Co-Head of Technology, KKR</p>
-                <div class="icon has-sm-shadow position-absolute d-flex align-items-center justify-content-center">
-                  <img src="./assets/images/icons/style-02/code.svg" class="img-fluid" alt="image">
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- col -->
-          <div class="col-xl-3 col-lg-4 col-md-6 mb-0">
-            <!-- item -->
-            <div class="item has-sm-shadow">
-              <div class="img-c position-relative">
-                <img src="./assets/images/char/03.jpg" class="img-fluid" alt="image">
-                <div class="position-absolute">
-                  <h4 class="f-name mb-0">Montaser</h4>
-                  <h5 class="l-name mb-0">Kamal</h5>
-                </div>
-              </div>
-              <div class="info position-relative">
-                <h6 class="mb-2">Former Chief</h6>
-                <p class="mb-0">Member, Private Equity & Co-Head of Technology, KKR</p>
-                <div class="icon has-sm-shadow position-absolute d-flex align-items-center justify-content-center">
-                  <img src="./assets/images/icons/style-02/manager.svg" class="img-fluid" alt="image">
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- col -->
-          <div class="d-xl-none d-lg-flex d-none col-8 mb-0">
-            <img src="./assets/images/vectors/02.svg" class="img-fluid" alt="image">
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <!-- :: FAQ Section -->
-    <div class="faq py-80 bg-2">
+    <section id="billing" class="overview-block-ptb iq-amazing-tab grey-bg py-80">
       <div class="container">
-        <!-- head -->
-        <div class="section-head">
-          <h5 class="mb-0">What is going on in your mind</h5>
-          <h2 class="my-3">Frequently Asked Questions</h2>
-          <p class="mb-0 mx-auto">Get the answers to frequently asked questions about our hosting service.</p>
+
+        	<!-- section head -->
+        <div class="section-head text-center">
+          <h5 class="mb-0">Sacco Benki Modules</h5>
+          <h3 class="mb-3">The Mobile App Features</h3>
+          <p>
+            Here are some of the amazing features that come with our mobile App
+          </p>
         </div>
-        <!-- row -->
-				<div class="row child-mb-1">
-          <!-- col -->
-          <div class="col-12">
-            <!-- item -->
-            <div class="item has-sm-shadow">
-              <h5 class="mb-3">What makes VRocket Web Hosting the world leader?</h5>
-              <p class="mb-0">With nearly 20 years in the industry, we have the experience, the technology and the hosting experts to help web designers, developers, bloggers and online businesses create and maintain their online presence. Our secure hosting platform, complete with cPanel, offers a 99.9% uptime guarantee and award-winning support, which has helped nearly 19 million customers get online.</p>
-            </div>
+          
+          <div class="row">
+              <div class="col-sm-6 col-md-4 col-lg-4">
+                  <!-- Nav tabs -->
+                  <ul class="nav nav-tabs" role="tablist">
+                      <li role="presentation" class="active wow fadeInLeft" data-wow-duration="1s">
+                          <a class="round-right" href="#design" aria-controls="design" role="tab" data-toggle="tab">
+                              <div class="iq-fancy-box-01 text-right">
+                                  <i aria-hidden="true" class="mdi mdi-thumb-up-outline"></i>
+                                  <h4 class="iq-tw-6">Simple</h4>
+                                  <div class="fancy-content-01">
+                                      <p>The app is simple and easy to navigate through hence enabling your customers to use it effectively and efficiently</p>
+                                  </div>
+                              </div>
+                          </a>
+                      </li>
+                      <li role="presentation" class="wow fadeInLeft" data-wow-duration="1s" >
+                          <a class="round-right" href="#resolution" aria-controls="resolution" role="tab" data-toggle="tab">
+                              <div class="iq-fancy-box-01 text-right">
+                                  <i aria-hidden="true" class="mdi mdi-receipt"></i>
+                                  <h4 class="iq-tw-6">Bill Payments</h4>
+                                  <div class="fancy-content-01">
+                                      <p>Alllow your customers to easily pay for their utility bills from their debitable accounts with the help of the App.</p>
+                                  </div>
+                              </div>
+                          </a>
+                      </li>
+                      <li role="presentation" class="wow fadeInLeft" data-wow-duration="1s">
+                          <a class="round-right" href="#ready" aria-controls="ready" role="tab" data-toggle="tab">
+                              <div class="iq-fancy-box-01 text-right">
+                                  <i aria-hidden="true" class="mdi mdi-bell-check-outline"></i>
+                                  <h4 class="iq-tw-6">Notifications</h4>
+                                  <div class="fancy-content-01">
+                                      <p>
+                                        Let your customers be notified in real time on matters concerning their accounts and loans as well as messages and announcements from the sacco
+                                      </p>
+                                  </div>
+                              </div>
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+              <div class="col-md-4 text-center hidden-sm hidden-xs">
+                  <!-- Tab panes -->
+                  <div class="tab-content">
+                      <div role="tabpanel" class="tab-pane active" id="design"><img src="assets/images/screenshots/01.jpg" class="img-responsive center-block" alt="#"></div>
+                      <div role="tabpanel" class="tab-pane" id="resolution"><img src="assets/images/screenshots/02.jpg" class="img-responsive center-block" alt="#"></div>
+                      <div role="tabpanel" class="tab-pane" id="ready"><img src="assets/images/screenshots/03.jpg" class="img-responsive center-block" alt="#"></div>
+                      <div role="tabpanel" class="tab-pane" id="fertures"><img src="assets/images/screenshots/04.jpg" class="img-responsive center-block" alt="#"></div>
+                      <div role="tabpanel" class="tab-pane" id="face"><img src="assets/images/screenshots/05.jpg" class="img-responsive center-block" alt="#"></div>
+                      <div role="tabpanel" class="tab-pane" id="codes"><img src="assets/images/screenshots/06.jpg" class="img-responsive center-block" alt="#"></div>
+                  </div>
+              </div>
+              <div class="col-sm-6 col-md-4 col-lg-4">
+                  <ul class="nav nav-tabs" role="tablist">
+                      <li role="presentation" class="wow fadeInRight" data-wow-duration="1s">
+                          <a href="#fertures" aria-controls="fertures" role="tab" data-toggle="tab">
+                              <div class="iq-fancy-box-01">
+                                  <i aria-hidden="true" class="mdi mdi-cash-multiple"></i>
+                                  <h4 class="iq-tw-6">Loans</h4>
+                                  <div class="fancy-content-01">
+                                      <p>
+                                        Allow your members to easily apply for loan and follow up on their applications and existing loans. This way the time taken to apply for a loan is gratily reduced and made even more attractive to your members.
+                                      </p>
+                                  </div>
+                              </div>
+                          </a>
+                      </li>
+                      <li role="presentation" class="wow fadeInRight" data-wow-duration="1s">
+                          <a href="#face" aria-controls="face" role="tab" data-toggle="tab">
+                              <div class="iq-fancy-box-01">
+                                  <i aria-hidden="true" class="mdi mdi-cash-refund"></i>
+                                  <h4 class="iq-tw-6">Funds Withdrawal</h4>
+                                  <div class="fancy-content-01">
+                                      <p>Allow your members to withdraw their funds easily and efficiently through mobile wallets and their bank accounts with a click of a button.</p>
+                                  </div>
+                              </div>
+                          </a>
+                      </li>
+                      <li role="presentation" class="wow fadeInRight" data-wow-duration="1s">
+                          <a href="#codes" aria-controls="codes" role="tab" data-toggle="tab">
+                              <div class="iq-fancy-box-01">
+                                  <i aria-hidden="true" class="mdi mdi-history"></i>
+                                  <h4 class="iq-tw-6">Statements</h4>
+                                  <div class="fancy-content-01">
+                                      <p>With the transactions history in place, member can easily have a view of their account activities anywhere at any time.</p>
+                                  </div>
+                              </div>
+                          </a>
+                      </li>
+                  </ul>
+              </div>
           </div>
-          <!-- col -->
-          <div class="col-12">
-            <!-- item -->
-            <div class="item has-sm-shadow">
-              <h5 class="mb-3">What type of customer support does VRocket offer with their web hosting?</h5>
-              <p class="mb-0">VRocket offers 24/7 professional customer support with all of our web hosting plans for no additional cost. You can call or chat with us at any time and a dedicated support rep will assist you with any inquiry or concern you may have. Our support is available for all website hosting plan types, so no matter what platform you need, know that we are here to help you every step of the way. For customers looking for WordPress design or functionality support, we offer WP Live. This premium service starts at $29 per month and gives you access to our WordPress technical support team. They can assist with everything from selecting a theme, to design, to even plugin development questions.</p>
-            </div>
-          </div>
-          <!-- col -->
-          <div class="col-12">
-            <!-- item -->
-            <div class="item has-sm-shadow">
-              <h5 class="mb-3">Which domain sould i buy?</h5>
-              <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda cum quis soluta voluptate, nam cupiditate corporis temporibus optio iure alias illum velit officiis accusantium tempora dolores, incidunt itaque maxime. Neque.<a href="#">All domains</a></p>
-            </div>
-          </div>
-          <!-- col -->
-          <div class="col-12">
-            <!-- item -->
-            <div class="item has-sm-shadow">
-              <h5 class="mb-3">What are the different types of web hosting options VRocket offers?</h5>
-              <p class="mb-0">VRocket offers multiple website hosting options to fit the various needs and budgets of our customers. Shared Hosting, Cloud Hosting, VPS Hosting, and Dedicated Hosting are our standard options, however we also offer specialized hosting for specific website building applications like WordPress and WooCommerce. Each platform is built on reliable, high-performance servers and is supported by our 24/7 expert support teams.<a href="#">All domains</a></p>
-            </div>
-          </div>
-          <!-- col -->
-          <div class="col-12">
-            <!-- item -->
-            <div class="item has-sm-shadow">
-              <h5 class="mb-3">How does VRocket help small business owners succeed?</h5>
-              <p class="mb-0">VRocket offers more than just a platform to build your website, we offer everything you need to create an effective, memorable online presence. Already have a site? We offer hosting plans that will keep it fast, secure and online. Our professional email helps you build a professional image, while our online marketing tools empower entrepreneurs to get online with an SEO-friendly website. VRocket is an all-in-one solution provider to get your idea online, backed with expert, personalized support from VRocket Guides.</p>
-            </div>
-          </div>
-          <!-- col -->
-          <div class="col-12">
-            <!-- item -->
-            <div class="item has-sm-shadow">
-              <h5 class="mb-3">Why do I need a professional email?</h5>
-              <p class="mb-0">There are a few different reasons. Our award-winning support is always high on the list of why people move their presence to GoDaddy. Of course, our prices — including a free 1-year extension on many domain transfers — is another popular reason. And if you already have one or more of our products, transferring your domain, website or hosting to us lets you consolidate your web presence with one provider so it’s easier to manage.</p>
-            </div>
-          </div>
-				</div>
       </div>
-    </div>
+  </section>
+   
+   
 
   </main>
 
   <!-- :: Footer -->
-  <footer>
+  <footer class="d-none">
     <!-- newsletter -->
     <div class="n-l">
       <div class="container text-center">
@@ -1057,6 +827,8 @@ enables you to tell the story of your performance through charts and graphs and 
   <script src="./assets/js/lib/jquery-3.3.1.min.js"></script>
   <script src="./assets/js/lib/popper.js"></script>
   <script src="./assets/js/lib/bootstrap.min.js"></script>
+  <script src="./assets/js/lib/owl.js"></script>
+  <script src="./assets/js/lib/wow.js"></script>
   <script src="./assets/js/theme/theme.js"></script>
 </body>
 </html>

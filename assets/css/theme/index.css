@@ -114,7 +114,7 @@ header ul.social-links a:hover {
 /* -- :: Section III */
 .se-iii .box {
   padding: 20px;
-  background: #fff;
+  /* background: #fff; */
   border-radius: 5px;
 }
 .se-iii .box img {
