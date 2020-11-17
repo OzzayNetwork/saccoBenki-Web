@@ -57,19 +57,52 @@
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
 
+
   loanCalculator();
   function loanCalculator(){
-    var amount=$('.loanAmount').val();
-    var rate=$('.loanRate').val();
-    var months=$('.loanMonths').val();
+    var amount=parseInt($('.loanAmount').val());
+    var rate=parseInt($('.loanRate').val());
+    var months=parseInt($('.loanMonths').val());
+    var r=rate/100/12;
+
+    var x = Math.pow(1 + r, months);
+    var monthly = (amount*x*r)/(x-1);
+    
+
+    if(amount==""){
+      amount=0;
+    }
+    if(rate==""){
+      rate=0;
+    }
+    if(months==""){
+      months=0;
+    }
+
+    
     var totalLoan=0;
     var monthlyPay=0;
 
     monthlyPay=(amount*months*rate)/100;
-    totalLoan=monthlyPay*months;
+    totalLoan=(monthlyPay*months)+amount;
 
     $('.totalLoan').text(numberWithCommas(totalLoan)+'.00');
     $('.monthlyPay').text(numberWithCommas(monthlyPay)+'.00');
+
+    if (!isNaN(monthly) && 
+        (monthly != Number.POSITIVE_INFINITY) &&
+        (monthly != Number.NEGATIVE_INFINITY)) {
+
+          $('.totalLoan').text(numberWithCommas(round(monthly * months)));
+          $('.monthlyPay').text(numberWithCommas(round(monthly)));
+
+    }
+    // Otherwise, the user's input was probably invalid, so don't
+    // display anything.
+    else {
+      $('.totalLoan').text(numberWithCommas(round(monthly * months)));
+      $('.monthlyPay').text(numberWithCommas(round(monthly)));
+    }
   }
   $('.loanCalculator input').on('change', function(){
     loanCalculator(); 
@@ -82,6 +115,11 @@
   $('.loanCalculator input').on('keydown', function(){
     loanCalculator(); 
   });
+
+  // This simple method rounds a number to two decimal places.
+  function round(x) {
+    return Math.round(x*100)/100;
+  }
 
   //alternating scenes
 	var numberOfScreens=0;

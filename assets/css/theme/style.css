@@ -144,12 +144,12 @@ a {
 }
 
 .th-btn-outline-primary {
-  color: #ff3301;
+  color: #ff3301 !important;
   border: 1px solid #ff3301;
   background: transparent;
 }
 .th-btn-outline-primary:hover {
-  color: #fff;
+  color: #fff !important;
   border: 1px solid #ff3301;
   background: #ff3301;
 }
