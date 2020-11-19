@@ -193,12 +193,13 @@
             Sacco Benki Platform handles transactions including deposits, withdrawals, loans, and many other records for Saccos, Micro-Credit institutions and similar entities of any size
           </p>
           <div class="d-flex flex-wrap align-items-center justify-content-lg-start justify-content-center">
-            <a href="#" class="th-btn th-btn-fill-primary mx-2 my-2">
-              <i class="fa fa-search mr-2"></i>
+            <a href="#booking-form" data-toggle="modal" data-target="#booking-form" 
+            class="th-btn th-btn-fill-primary mx-2 my-2">
+              <i class="fa fa-bookmark mr-2"></i>
               Book Demo
             </a>
-            <a href="#" class="th-btn th-btn-outline-primary mx-2 my-2">
-              <i class="fa fa-diamond mr-2"></i>
+            <a href="#contact" class="th-btn th-btn-outline-primary mx-2 my-2">
+              <i class="fa fa-phone mr-2"></i>
               Contact Us
             </a>
           </div>
@@ -733,6 +734,92 @@ enables you to tell the story of your performance through charts and graphs and 
           </div>
       </div>
   </section>
+
+
+    <!-- book a demo modal -->
+    <div class="modal fade" id="booking-form" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="exampleModalLongTitle">Book A Demo</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true"><i class="pe-7s-close"></i></span>
+          </button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="col-12 p-0">
+            <div class="pr-3 pl-1">
+              <div class="row">
+                <div class="col-md-5 p-0 position-relative img-cont">
+                  <div class="modal-img"></div>
+                  <div class="p-5 text-white position-relative">
+                    <h4 class="text-white">Book A Demo</h4>
+                    <p>Fill in the application form to request for a demo.</p>
+                    <img class="" src="assets/images/backgrounds/footer.svg">
+                  </div>
+                </div>
+                <div class="col-md-7 col-sm-12 py-3">
+                  <form class="px-2">
+                    <div class="form-group col-sm-12 p-0">
+                      <h4 style="margin-top: 2rem;">Application Form</h4>
+                    </div>
+                    <label>Name</label>
+                    <div class="row">
+                      
+                      <div class="col-sm-12 col-md-6 mb-3">
+                        <input type="text" class="form-control" title="enter your first name" placeholder="First name">
+                      </div>
+                      <div class="col-sm-12 col-md-6 mb-3">
+                        <input type="text" class="form-control" title="enter your other names" placeholder="Other Name(s)">
+                      </div>
+                    </div>
+                    <div class="row pt-3"> 
+                      <div class="form-group col-md-6 col-sm-12">
+                        <label for="exampleFormControlInput1">Designation</label>
+                        <input type="text" title="What's your role in the organization" class="form-control" id="exampleFormControlInput1" placeholder="Enter your designation">
+                      </div> 
+    
+                      <div class="form-group col-md-6 col-sm-12">
+                        <label for="exampleFormControlInput1">Organization Name</label>
+                        <input type="text" title="what's the name to your organization" class="form-control" id="exampleFormControlInput1" placeholder="Enter company/organization Name">
+                      </div>  
+                    </div>
+  
+                    <div class="row mt-3">
+                      <div class="form-group col-md-6 col-sm-12">
+                        <label for="exampleFormControlInput1">Phone Number</label>
+                        <input type="text" title="enter a phone number to the organization" class="form-control" id="exampleFormControlInput1" placeholder="Enter your Phone number">
+                      </div>  
+    
+                      <div class="form-group col-md-6 col-sm-12">
+                        <label for="exampleFormControlInput1">Email</label>
+                        <input type="text" title="Enter your email address" class="form-control" id="exampleFormControlInput1" placeholder="Enter your email address">
+                      </div> 
+                    </div>
+                    
+                    <div class="form-group">
+                      <label for="exampleFormControlInput1">Organization Location</label>
+                      <input type="text" title="Remember to specify the country as well" class="form-control"  placeholder="eg. Along Langata road Nairobi, Kenya">
+                    </div>
+                    <div class="col-12 px-0">
+                      <button type="submit" class="btn btn-primary mb-2">Send request <i class="ml-2 icon-action-redo icons"></i></button>
+                    </div>
+  
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>		 
+        </div>
+        <div class="modal-footer d-none">
+          <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+          <button  type="button" class="btn btn-primary full-screen"><i class="icon-size-fullscreen icons mr-3"></i>Full Screen</button>
+        </div>
+        </div>
+      </div>
+      </div>
+    <!-- book a demo modal -->
+
    
    
 
@@ -742,7 +829,7 @@ enables you to tell the story of your performance through charts and graphs and 
   <footer class="" id="contacts">
     <!-- newsletter -->
     <div class="n-l">
-      <div class="container">
+      <div class="container" id="contact">
         <h2 class="mb-4">Subscribe To Our Newsletter</h2>
         <form action="#" class="row">
             <div class="col-sm-12 col-md-8">
