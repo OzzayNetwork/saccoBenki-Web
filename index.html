@@ -1,946 +1,934 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <!-- :: Meta -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="sacco benki">
-  <meta name="description" content="sacco banking online services">
-  <meta name="description" content="sacco banking tools">
-  <meta name="description" content="the best sacco banking tool">
- 
-  <meta name="description" content="sacco banking">
-  <meta name="description" content="sacco banking game changer">
-  <meta name="description" content="sacco banking made easy">
-  <meta name="description" content="sacco banking">
+    <!-- :: Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sacco-Benki is an integrated platform engineered to provide digital services to SACCOs, Micro-finance banks and other micro-credit organizations such as chamas.">
 
-  <meta name="author" content="Nouveta LTD | Nouveta">
-  <meta name="msapplication-tap-highlight" content="no">
-  <meta name="theme-color" content="#0635c9">
-  <meta name="keywords" content="Sacco, banking, Nouveta, money, ushuru, loan, loan calculator, sacco app, kenya, africa,  revenuesure, reconmate,sacco benki, bank, finance, financial institution">
-  <!-- icons -->
+    <meta name="author" content="Nouveta LTD | Nouveta">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="theme-color" content="#0635c9">
+    <meta name="keywords" content="Sacco, banking, Nouveta, money, ushuru, loan, loan calculator, sacco app, kenya, africa,  revenuesure, reconmate,sacco benki, bank, finance, financial institution">
+    <!-- icons -->
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@5.8.55/css/materialdesignicons.min.css">
-  <!-- :: Stylesheet -->
-  <link rel="stylesheet" href="./assets/css/lib/bootstrap.css">
-  <link rel="stylesheet" href="./assets/css/lib/font-awesome.min.css">
-  <link rel="stylesheet" href="./assets/css/theme/style.css">
-  <link rel="stylesheet" href="./assets/css/theme/index.css">
-  <link rel="stylesheet" href="./assets/css/lib/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@5.8.55/css/materialdesignicons.min.css">
+    <!-- :: Stylesheet -->
+    <link rel="stylesheet" href="./assets/css/lib/bootstrap.css">
+    <link rel="stylesheet" href="./assets/css/lib/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/theme/style.css">
+    <link rel="stylesheet" href="./assets/css/theme/index.css">
+    <link rel="stylesheet" href="./assets/css/lib/ionicons.min.css">
 
-  <link rel="shortcut icon" href="assets/images/logos/icon_3.png" type="image/x-icon">
-  <title>Sacco Benki</title>
+    <link rel="shortcut icon" href="assets/images/logos/icon_3.png" type="image/x-icon">
+    <title>Sacco Benki | Sacco Banking Game Changer</title>
 </head>
+
 <body>
 
-  <!-- modals -->
-  <div class="modal fade" id="loanCalculator" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header bg-primary text-white">
-          <h5 class="modal-title" id="exampleModalLongTitle">Loan Calculator</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <!-- modals -->
+    <div class="modal fade" id="loanCalculator" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Loan Calculator</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true" class="text-color"><i class="mdi mdi-close text-white"></i></span>
           </button>
-        </div>
-        <div class="modal-body pt-0 mt-0">
-          <div class="row bg-2 mb-4 pt-3">
-            <div class="col-sm-12 font-12">
-              <p>
-                The Sacco Benki Loan calculator can help you ascertain how much you might be able to borrow and what your repayments would be.
-              </p>
-              <p>
-                Start calculating your loan amount now and if you like what you see we can help you register with one of our member Sacco and get you going.
-              </p>
-            </div>
-          </div>
-          <div class="row loanCalculator">
-            
-            <div class="col-sm-12 col-md-12">
-              <div class="form-group">
-                <label>Loan amount in KES</label>
-                <input type="text" class="form-control loanAmount" placeholder="Enter Amount">
-              </div>
-            </div>
+                </div>
+                <div class="modal-body pt-0 mt-0">
+                    <div class="row bg-2 mb-4 pt-3">
+                        <div class="col-sm-12 font-12">
+                            <p>
+                                The Sacco Benki Loan calculator can help you ascertain how much you might be able to borrow and what your repayments would be.
+                            </p>
+                            <p>
+                                Start calculating your loan amount now and if you like what you see we can help you register with one of our member Sacco and get you going.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row loanCalculator">
 
-            <div class="col-sm-12 col-md-6">
-              <div class="form-group">
-                <label>Term in Months</label>
-                <input type="text" class="form-control loanMonths" placeholder="Enter Number of Months">
-              </div>
-            </div>
+                        <div class="col-sm-12 col-md-12">
+                            <div class="form-group">
+                                <label>Loan amount in KES</label>
+                                <input type="text" class="form-control loanAmount" placeholder="Enter Amount">
+                            </div>
+                        </div>
 
-            <div class="col-sm-12 col-md-6">
-              <div class="form-group">
-                <label>Loan rate (%)</label>
-                <input type="text" class="form-control loanRate" placeholder="Enter Rate">
-              </div>
-            </div>
+                        <div class="col-sm-12 col-md-6">
+                            <div class="form-group">
+                                <label>Term in Months</label>
+                                <input type="text" class="form-control loanMonths" placeholder="Enter Number of Months">
+                            </div>
+                        </div>
 
-          </div>
-        </div>
-        <div class="modal-footer features-row text-white">
-          <div class="col-12">
-            <div class="row">
-              <div class="col-md-6 col-sm-12 px-0">
-                <small class="text-lighter">Monthly Repayment (Kes)</small>
-                <h5 class="monthlyPay">0.00</h5>
-              </div>
-  
-              <div class="col-md-6 col-sm-12 px-0">
-              <small class="text-lighter">Total Amount Repayable (Kes)</small>
-              <h5 class="totalLoan">0.00</h5>
+                        <div class="col-sm-12 col-md-6">
+                            <div class="form-group">
+                                <label>Loan rate (%)</label>
+                                <input type="text" class="form-control loanRate" placeholder="Enter Rate">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer features-row text-white">
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12 px-0">
+                                <small class="text-lighter">Monthly Repayment (Kes)</small>
+                                <h5 class="monthlyPay">0.00</h5>
+                            </div>
+
+                            <div class="col-md-6 col-sm-12 px-0">
+                                <small class="text-lighter">Total Amount Repayable (Kes)</small>
+                                <h5 class="totalLoan">0.00</h5>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
             </div>
-  
-            </div>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
-  <!-- end of my modals -->
+    <!-- end of my modals -->
 
-  <!-- :: Navbar -->
-  <nav class="th-nav-st1">
-    <div class="container">
-      <!-- nav content -->
-      <div class="nav-content d-flex align-items-center justify-content-between">
-        <!-- brand -->
-        <a href="#home" class="brand">
-          <img src="./assets/images/logos/1.png" class="img-fluid" alt="">
-        </a>
-        <!-- links -->
-        <ul class="nav-links list-unstyled d-lg-flex align-items-center justify-content-end mb-0">
+    <!-- :: Navbar -->
+    <nav class="th-nav-st1">
+        <div class="container">
+            <!-- nav content -->
+            <div class="nav-content d-flex align-items-center justify-content-between">
+                <!-- brand -->
+                <a href="#home" class="brand">
+                    <img src="./assets/images/logos/1.png" class="img-fluid" alt="">
+                </a>
+                <!-- links -->
+                <ul class="nav-links list-unstyled d-lg-flex align-items-center justify-content-end mb-0">
 
-          <!-- nav item -->
-          <li class="th-nav-item position-relative">
-            <a href="#home" class="position-relative d-flex align-items-center justify-content-lg-center justify-content-between text-capitalize">home</a>
-          </li>
-          <li class="th-nav-item position-relative">
-            <a href="#sacco-benefits" class="position-relative d-flex align-items-center justify-content-lg-center justify-content-between text-capitalize">Benefits</a>
-          </li>
+                    <!-- nav item -->
+                    <li class="th-nav-item position-relative">
+                        <a href="#home" class="position-relative d-flex align-items-center justify-content-lg-center justify-content-between text-capitalize">home</a>
+                    </li>
+                    <li class="th-nav-item position-relative">
+                        <a href="#sacco-benefits" class="position-relative d-flex align-items-center justify-content-lg-center justify-content-between text-capitalize">Benefits</a>
+                    </li>
 
-          <!-- nav item has dropdown -->
-          <li class="th-nav-item has-dropdown position-relative d-none">
-            <a href="#" onclick="return false;" class="position-relative d-flex align-items-center justify-content-lg-center justify-content-between text-capitalize">Benefits</a>
-            <!-- dropdown list -->
-            <ul class="th-dropdown-list list-unstyled mb-0">
-              <li class="th-dropdown-item">
-                <a href="#modules" class="position-relative d-flex align-items-center justify-content-between text-capitalize">Modules</a>
-              </li>
-              
-              <li class="th-dropdown-item">
-                <a href="#" class="position-relative d-flex align-items-center justify-content-between text-capitalize">Contacts</a>
-              </li>
-            </ul>
-          </li>
+                    <!-- nav item has dropdown -->
+                    <li class="th-nav-item has-dropdown position-relative d-none">
+                        <a href="#" onclick="return false;" class="position-relative d-flex align-items-center justify-content-lg-center justify-content-between text-capitalize">Benefits</a>
+                        <!-- dropdown list -->
+                        <ul class="th-dropdown-list list-unstyled mb-0">
+                            <li class="th-dropdown-item">
+                                <a href="#modules" class="position-relative d-flex align-items-center justify-content-between text-capitalize">Modules</a>
+                            </li>
 
-          <!-- nav item has dropdown -->
-          <li class="th-nav-item has-dropdown position-relative">
-            <a href="#" onclick="return false;" class="position-relative d-flex align-items-center justify-content-lg-center justify-content-between text-capitalize">Modules</a>
-            <!-- dropdown list -->
-            <ul class="th-dropdown-list list-unstyled mb-0">
-              <li class="th-dropdown-item">
-                <a href="#monitoring" class="position-relative d-flex align-items-center justify-content-between text-capitalize">Monitoring</a>
-              </li>
-              <li class="th-dropdown-item">
-                <a href="#billing" class="position-relative d-flex align-items-center justify-content-between text-capitalize">Customer App</a>
-              </li>
-              
-            </ul>
-          </li>
+                            <li class="th-dropdown-item">
+                                <a href="#" class="position-relative d-flex align-items-center justify-content-between text-capitalize">Contacts</a>
+                            </li>
+                        </ul>
+                    </li>
 
-          <!-- nav item -->
-          <li class="th-nav-item position-relative">
-            <a href="#contacts" class="position-relative d-flex align-items-center justify-content-lg-center justify-content-between text-capitalize">Contacts</a>
-          </li>
+                    <!-- nav item has dropdown -->
+                    <li class="th-nav-item has-dropdown position-relative">
+                        <a href="#" onclick="return false;" class="position-relative d-flex align-items-center justify-content-lg-center justify-content-between text-capitalize">Modules</a>
+                        <!-- dropdown list -->
+                        <ul class="th-dropdown-list list-unstyled mb-0">
+                            <li class="th-dropdown-item">
+                                <a href="#monitoring" class="position-relative d-flex align-items-center justify-content-between text-capitalize">Monitoring</a>
+                            </li>
+                            <li class="th-dropdown-item">
+                                <a href="#billing" class="position-relative d-flex align-items-center justify-content-between text-capitalize">Customer App</a>
+                            </li>
 
-          <!-- nav item -->
-          <li class="th-nav-item position-relative d-none">
-            <a href="#" class="position-relative d-flex align-items-center justify-content-lg-center justify-content-between text-capitalize">support</a>
-          </li>
+                        </ul>
+                    </li>
 
-          <!-- nav item -->
-          <li class="th-nav-item user-item position-relative">
-            <button class="th-btn th-btn-outline-primary mx-2 my-2" data-toggle="modal" data-target="#loanCalculator"><i class="mdi mdi-calculator mr-2"></i> Loan Calculator</button>
-            <a href="./pages/login.html" class="d-none position-relative d-flex align-items-center justify-content-lg-center justify-content-between text-capitalize">
-              <i class="mdi mdi-calculator mr-2 d-lg-inline-flex"></i>
-              <span class="d-inline-flex text-capitalize">Loan Calculator</span>
-            </a>
-          </li>
+                    <!-- nav item -->
+                    <li class="th-nav-item position-relative">
+                        <a href="#contacts" class="position-relative d-flex align-items-center justify-content-lg-center justify-content-between text-capitalize">Contacts</a>
+                    </li>
 
-        </ul>
-        <!-- toggler -->
-        <button class="nav-toggler position-relative d-lg-none d-block" id="nav_toggler">
+                    <!-- nav item -->
+                    <li class="th-nav-item position-relative d-none">
+                        <a href="#" class="position-relative d-flex align-items-center justify-content-lg-center justify-content-between text-capitalize">support</a>
+                    </li>
+
+                    <!-- nav item -->
+                    <li class="th-nav-item user-item position-relative">
+                        <button class="th-btn th-btn-outline-primary mx-2 my-2" data-toggle="modal" data-target="#loanCalculator"><i class="mdi mdi-calculator mr-2"></i> Loan Calculator</button>
+                        <a href="./pages/login.html" class="d-none position-relative d-flex align-items-center justify-content-lg-center justify-content-between text-capitalize">
+                            <i class="mdi mdi-calculator mr-2 d-lg-inline-flex"></i>
+                            <span class="d-inline-flex text-capitalize">Loan Calculator</span>
+                        </a>
+                    </li>
+
+                </ul>
+                <!-- toggler -->
+                <button class="nav-toggler position-relative d-lg-none d-block" id="nav_toggler">
           <span class="d-block w-100"></span>
           <span class="d-block w-100"></span>
           <span class="d-block w-100"></span>
         </button>
-      </div>
-    </div>
-  </nav>
-
-  <!-- :: Header -->
-	<header>
-    <div class="container" id="home">
-      <!-- row -->
-      <div class="row">
-        <!-- col -->
-        <div class="col-xl-7 col-lg-8 text-lg-left text-center">
-          <h1 class="mb-4 text-uppercase">Sacco Banking Game changer</h1>
-          <p class="mb-5">
-            Sacco-Benki is an integrated platform engineered to provide digital services to SACCOs, Micro-finance banks and other micro-credit organizations such as chamas.
-          </p>
-          <div class="d-flex flex-wrap align-items-center justify-content-lg-start justify-content-center">
-            <a href="#" class="th-btn th-btn-fill-primary mx-2 my-2">
-              <i class="fa fa-search mr-2"></i>
-              Book Demo
-            </a>
-            <a href="#" class="th-btn th-btn-outline-primary mx-2 my-2">
-              <i class="fa fa-diamond mr-2"></i>
-              Contact Us
-            </a>
-          </div>
+            </div>
         </div>
-        <div class="col-xl-5 col-lg-4">
-          <img src="assets/images/webImages/phone.png" class="phone-mockup">
+    </nav>
+
+    <!-- :: Header -->
+    <header>
+        <div class="container" id="home">
+            <!-- row -->
+            <div class="row">
+                <!-- col -->
+                <div class="col-xl-7 col-lg-8 text-lg-left text-center">
+                    <h1 class="mb-4 text-uppercase">Sacco Banking Game changer</h1>
+                    <p class="mb-5">
+                        Sacco-Benki is an integrated platform engineered to provide digital services to SACCOs, Micro-finance banks and other micro-credit organizations such as chamas.
+                    </p>
+                    <div class="d-flex flex-wrap align-items-center justify-content-lg-start justify-content-center">
+                        <a href="#" class="th-btn th-btn-fill-primary mx-2 my-2">
+                            <i class="fa fa-search mr-2"></i> Book Demo
+                        </a>
+                        <a href="#" class="th-btn th-btn-outline-primary mx-2 my-2">
+                            <i class="fa fa-diamond mr-2"></i> Contact Us
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xl-5 col-lg-4">
+                    <img src="assets/images/webImages/phone.png" class="phone-mockup">
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <!-- social links -->
-    <ul class="social-links list-unstyled d-lg-block d-none mb-0 child-mb-1">
-      <li>
-        <a href="#" class="d-inline-flex align-items-center justify-content-center"><i class="fa fa-facebook"></i></a>
-      </li>
-      <li>
-        <a href="#" class="d-inline-flex align-items-center justify-content-center"><i class="fa fa-twitter"></i></a>
-      </li>
-      <li>
-        <a href="#" class="d-inline-flex align-items-center justify-content-center"><i class="fa fa-linkedin"></i></a>
-      </li>
-    </ul>
-  </header>
-
-  <!-- :: Features Row -->
-  <div class="features-row" id="features">
-    <div class="container">
-      <!-- row -->
-      <div class="row home-section-2">
-
-        <!-- col -->
-        <div class="col-xl-4 col-md-6 text-md-left text-center">
-          <!-- item -->
-          <div class="item py-5 pb-xl-5">
-            <span>
-              <i class="mdi mdi-fingerprint text-primary  d-inline-flex align-items-center justify-content-center"></i>
-            </span>
-            <h5 class="name mb-3">Secure</h5>
-            <p class="mb-0">
-              From sophisticated passwords and pins encryption techniques to the implementation of highly secure servers, Sacco Benki will ensure the protection of both Data and members investments at all costs.
-            </p>
-          </div>
-        </div>
-
-        <!-- col -->
-        <div class="col-xl-4 col-md-6 text-md-left text-center">
-          <!-- item -->
-          <div class="item pt-md-5 pt-4 pb-xl-5">
-            <span>
-              <i class="mdi mdi-access-point-check text-primary  d-inline-flex align-items-center justify-content-center"></i>
-            </span>
-            <h5 class="name mb-3">Reliable</h5>
-            <p class="mb-0">
-             This is key and has been addressed thoroughly through ensuring that the platform is made available through the mobile app store, web apps and several portals each with customized functionalities for the different users.
-            </p>
-          </div>
-        </div>
-
-        <!-- col -->
-        <div class="col-xl-4 col-md-6 text-md-left text-center">
-          <!-- item -->
-          
-          <div class="item pt-xl-5 pt-4 pb-5">
-            <span>
-              <i class="mdi mdi-thumb-up-outline text-primary  d-inline-flex align-items-center justify-content-center"></i>
-            </span>
-            <h5 class="name mb-3">Adaptable</h5>
-            <p class="mb-0">It’s hard to believe anyone would want to harm your website, but they do. Thankfully, our security team is on the job 24/7 to meticulously monitor.</p>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </div>
-
-  <!-- :: Main -->
-  <main>
-
-    <!-- :: Section I -->
-    <div class="se-i py-80" id="sacco-benefits">
-      <div class="container">
-        <!-- head -->
-        <div class="section-head">
-          <h5 class="mb-0">Sacco Benki Benefits</h5>
-          <h2 class="my-3">Why Sacco Benki?</h2>
-          <p class="mb-0 mx-auto">
-            The following are the benefits of Sacco Benki
-          </p>
-        </div>
-        <!-- row -->
-        <div class="row child-mb-2">
-
-           <!-- col -->
-           <div class="col-xl-4 col-md-6 col-12">
-            <div class="fe-box text-md-left text-center">
-              <img src="./assets/images/icons/style-02/checklist.svg" class="img-fluid mb-4" alt="image">
-              <!-- text contain -->
-              <div class="t-c">
-                <h4 class="mb-md-5 mb-4">KYC Compliance</h4>
-                <p class="mb-0">
-                  Compliance with the sector and/or Central Bank rules, policies & laws on KYC.
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- col -->
-
-          <!-- col -->
-          <div class="col-xl-4 col-md-6 col-12">
-            <div class="fe-box text-md-left text-center">
-              <img src="./assets/images/icons/style-02/umbrella.svg" class="img-fluid mb-4" alt="image">
-              <!-- text contain -->
-              <div class="t-c">
-                <h4 class="mb-md-5 mb-4">Risk Mitigation</h4>
-                <p class="mb-0">
-                  Multifactor authentication for the system, this helps eliminate risks of hacking, illegal access to the system, and/or unauthorized access to data in the system.
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- col -->
-          <div class="col-xl-4 col-md-6 col-12">
-            <div class="fe-box text-md-left text-center">
-              <img src="./assets/images/icons/style-02/maintenance.svg" class="img-fluid mb-4" alt="image">
-              <!-- text contain -->
-              <div class="t-c">
-                <h4 class="mb-md-5 mb-4">Workflow</h4>
-                <p class="mb-0">
-                  Maker-Checker workflow support.Inbuilt continuous security monitoring and improvements.Sequential & rule-based workflow for routing & escalation of loan applications. Bi-directional flow is between authorized system users.
-
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- col -->
-          <div class="col-xl-4 col-md-6 col-12">
-            <div class="fe-box text-md-left text-center">
-              <img src="./assets/images/icons/style-02/forms.svg" class="img-fluid mb-4" alt="image">
-              <!-- text contain -->
-              <div class="t-c">
-                <h4 class="mb-md-5 mb-4">E-Forms</h4>
-                <p class="mb-0">
-                  Document management feature which enables customer to upload document into the system such as Microsoft word, PDF, JPEG or PNG. 
-                  Loan application form with credit score engine for appraisal. 
-                  Instant customer feedback on qualification reduce on paperwork.
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- col -->
-          <div class="col-xl-4 col-md-6 col-12 mb-xl-0">
-            <div class="fe-box text-md-left text-center">
-              <img src="./assets/images/icons/style-02/maintenance.svg" class="img-fluid mb-4" alt="image">
-              <!-- text contain -->
-              <div class="t-c">
-                <h4 class="mb-md-5 mb-4">Mobility</h4>
-                <p class="mb-0">
-                  “B2C”model; business goes to customer. 
-                  Offline Mode: Enables agents to “hunt” for customers anywhere and sync their transactions with the central server later.
-                  “Anytime-Anywhere” philosophy; boosts numbers, values & customer satisfaction index.
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- col -->
-          <div class="col-xl-4 col-md-6 col-12 mb-md-0">
-            <div class="fe-box text-md-left text-center">
-              <img src="./assets/images/icons/style-02/notifications.svg" class="img-fluid mb-4" alt="image">
-              <!-- text contain -->
-              <div class="t-c">
-                <h4 class="mb-md-5 mb-4">Notifications</h4>
-                <p class="mb-0">
-                  SACCO Benki has an integrated bulk SMS module. This combined with email notifications feature helps SACCO deliver real time notifications to members.
-Email notifications are sent to the transacting users at set stages of the process workflow. SMS notifications are sent to the customer, to all networks and across borders.
-
-
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- col -->
-          <div class="col-xl-4 col-md-6 col-12 mb-0">
-            <div class="fe-box text-md-left text-center">
-              <img src="./assets/images/icons/style-02/folder.svg" class="img-fluid mb-4" alt="image">
-              <!-- text contain -->
-              <div class="t-c">
-                <h4 class="mb-md-5 mb-4">Record Management</h4>
-                <p class="mb-0">
-                  Capture, organize, store & retrieve records with ease. 
-Audit process made easier by digitization of records & workflow.
-
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-xl-4 col-md-6 col-12 mb-0">
-            <div class="fe-box text-md-left text-center">
-              <img src="./assets/images/icons/style-02/sync.svg" class="img-fluid mb-4" alt="image">
-              <!-- text contain -->
-              <div class="t-c">
-                <h4 class="mb-md-5 mb-4">Synchronization</h4>
-                <p class="mb-0">
-                  Real time sync of information between agents and the core system. There is an offline support that allows agents to transact in an offline mode & upload/sync them to the server later.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-xl-4 col-md-6 col-12 mb-0">
-            <div class="fe-box text-md-left text-center">
-              <img src="./assets/images/icons/style-02/mpesa.png" class="img-fluid mb-4" alt="image">
-              <!-- text contain -->
-              <div class="t-c">
-                <h4 class="mb-md-5 mb-4">Mpesa Integration</h4>
-                <p class="mb-0">
-                  Integrates with Mpesa to allow members to pay for their loans and contributions via Mpesa automatically.                </p>
-              </div>
-            </div>
-          </div>
-
-
-        </div>
-      </div>
-    </div>
+        <!-- social links -->
+        <ul class="social-links list-unstyled d-lg-block d-none mb-0 child-mb-1">
+            <li>
+                <a href="#" class="d-inline-flex align-items-center justify-content-center"><i class="fa fa-facebook"></i></a>
+            </li>
+            <li>
+                <a href="#" class="d-inline-flex align-items-center justify-content-center"><i class="fa fa-twitter"></i></a>
+            </li>
+            <li>
+                <a href="#" class="d-inline-flex align-items-center justify-content-center"><i class="fa fa-linkedin"></i></a>
+            </li>
+        </ul>
+    </header>
 
     <!-- :: Features Row -->
-    <div class="features-row" id="monitoring">
-      <div class="container">
-        <!-- row -->
-        <div class="row">
-          <!-- col -->
-          <div class="col-sm-12 col-md-8 text-md-left text-center">
-            <!-- item -->
-            <div class="item pt-5 pb-xl-5">
-              <h5 class="name mb-3">Monitoring</h5>
-              
-              <p class="mb-0"> Anytime anywhere philosophy of services can be adopted. As your partner, our platform will offer you the much needed <strong>"CVVA"</strong> features.</p>
-            </div>
-          </div>
-         
-        </div>
-      </div>
-    </div>
-
-     <!-- :: Partners -->
-	<div class="partners py-80" id="modules">
-		<div class="container">
-			<!-- section head -->
-			<div class="section-head text-center">
-				<h3 class="mb-3">Sacco Benki Modules</h3>
-				<p>
-          The following are the available modules for sacco Benki.
-        </p>
-			</div>
-			<!-- row -->
-			<div class="row align-items-center text-lg-left text-center mb-60">
-				<!-- col -->
-				<div class="col-lg-6 mb-lg-0 mb-4">
-					<!-- contect -->
-					<div class="content">
-						<!-- img contain -->
-						<div class="img-c">
-							<img src="./assets/images/webImages/operational.png" class="img-fluid" alt="img">
-						</div>
-						<div class="th-badge green top right d-flex align-items-center justify-content-center">
-							<img src="./assets/images/icons/modules/operations.png" class="img-fluid" alt="img">
-						</div>
-					</div>
-				</div>
-				<!-- col -->
-				<div class="col-lg-6">
-					<!-- text contain -->
-					<div class="t-c">
-						<h3 class="mb-3">Operational Portal/Member management Operational Portal</h3>
-						<p class="mb-3">
-              This is the core module that takes care of the entire member registration process, loan application to loan disbursement. This portal makes the day-to-day activities of the SACCO much easier and much more effective reducing the turnaround time and thus helps improve the SACCO's performance and boosting member relationship in the end.
-            </p>
-						<a href="#" class="text-capitalize d-none">visit website now<i class="fa fa-arrow-right ml-2"></i></a>
-					</div>
-				</div>
-			</div>
-			<!-- row -->
-			<div class="row align-items-center text-lg-left text-center mb-60">
-				<!-- col -->
-				<div class="col-lg-6 order-lg-2 mb-lg-0 mb-4">
-					<!-- contect -->
-					<div class="content">
-						<!-- img contain -->
-						<div class="img-c">
-							<img src="./assets/images/webImages/finance.jpg" class="img-fluid" alt="img">
-						</div>
-						<div class="th-badge blue bottom left d-flex align-items-center justify-content-center">
-							<img src="./assets/images/icons/modules/finance.png" class="img-fluid" alt="img">
-						</div>
-					</div>
-				</div>
-				<!-- col -->
-				<div class="col-lg-6 order-lg-1">
-					<!-- text contain -->
-					<div class="t-c">
-						<h3 class="mb-3">Finance & Reporting Dashboards</h3>
-						<p class="mb-3">
-              Given the fierce competition in the financial sector, it is essential to arm yourself with visualization tools for crucial decisions for the future of your company. Our dashboard (figures & charts) enables you to tell the story of your performance through charts and graphs and also give analyzed reports on the SACCO's performance.
-            </p>
-						<a href="#" class="text-capitalize d-none">visit website now<i class="fa fa-arrow-right ml-2"></i></a>
-					</div>
-				</div>
-			</div>
-			<!-- row -->
-			<div class="row align-items-center text-lg-left text-center mb-60">
-				<!-- col -->
-				<div class="col-lg-6 mb-lg-0 mb-4">
-					<!-- contect -->
-					<div class="content">
-						<!-- img contain -->
-						<div class="img-c">
-							<img src="./assets/images/webImages/web.jpg" class="img-fluid" alt="img">
-						</div>
-						<div class="th-badge move top right d-flex align-items-center justify-content-center">
-							<img src="./assets/images/icons/modules/web.png" class="img-fluid" alt="img">
-						</div>
-					</div>
-				</div>
-				<!-- col -->
-				<div class="col-lg-6">
-					<!-- text contain -->
-					<div class="t-c">
-						<h3 class="mb-3">Customer's Self Service Portal</h3>
-						<p class="mb-3">From the self-service portal, SACCO members can view their statements, request for loans, appoint loan guarantors, approve or reject requests from fellow members to guarantee their loans.</p>
-            <a href="#" class="text-capitalize d-none">visit website now<i class="fa fa-arrow-right ml-2"></i></a>
-            
-					</div>
-				</div>
-			</div>
-			<!-- row -->
-			<div class="row align-items-center text-lg-left text-center">
-				<!-- col -->
-				<div class="col-lg-6 order-lg-2 mb-lg-0 mb-4">
-					<!-- contect -->
-					<div class="content">
-						<!-- img contain -->
-						<div class="img-c">
-							<img src="./assets/images/webImages/phone.jpg" class="img-fluid" alt="img">
-						</div>
-						<div class="th-badge orange bottom left d-flex align-items-center justify-content-center">
-							<img src="./assets/images/icons/modules/phone.png" class="img-fluid" alt="img">
-						</div>
-					</div>
-				</div>
-				<!-- col -->
-				<div class="col-lg-6 order-lg-1">
-					<!-- text contain -->
-					<div class="t-c">
-						<h3 class="mb-3">Customer's Mobile App</h3>
-						<p class="mb-3">
-              Every SACCO software system needs a mobile app that allows members to access their accounts and perform transactions. With the help of this mobile app, customers can get real time notifications and still have access to the services offered by the SACCO at the palm of their hand. With the app in place, the SACCO members can access services such as loan borrowing and fund deposits easily.
-            </p>
-            <a href="#" class="text-capitalize d-none">Mobile App features<i class="fa fa-arrow-right ml-2"></i></a>
-            <a href="#" class="th-btn th-btn-outline-primary mx-2 my-2"><i class="mdi mdi-android-debug-bridge mr-2"></i>Check It Out</a>
-					</div>
-				</div>
-			</div>
-
-      	<!-- row -->
-			<div class="row align-items-center text-lg-left text-center mb-60">
-				<!-- col -->
-				<div class="col-lg-6 mb-lg-0 mb-4">
-					<!-- contect -->
-					<div class="content">
-						<!-- img contain -->
-						<div class="img-c">
-							<img src="./assets/images/webImages/loan.jpg" class="img-fluid" alt="img">
-						</div>
-						<div class="th-badge move top right d-flex align-items-center justify-content-center">
-							<img src="./assets/images/icons/tax.svg" class="img-fluid" alt="img">
-						</div>
-					</div>
-				</div>
-				<!-- col -->
-				<div class="col-lg-6">
-					<!-- text contain -->
-					<div class="t-c">
-						<h3 class="mb-3">Loan management</h3>
-						<p class="mb-3">Loan product set up and configuration, loan application process, loan appraisal process, loan approval process, loan disbursement and loan repayment process. </p>
-            <a href="#" class="text-capitalize d-none">visit website now<i class="fa fa-arrow-right ml-2"></i></a>
-            
-					</div>
-				</div>
-			</div>
-			<!-- row -->
-		</div>
-	</div>
-
-    
-
-    
-
-    
-
-    
-
-    <!-- :: Section IV -->
-    <!-- :: Section III -->
-    <div class="se-iii py-80 bg-2">
-      <div class="container">
-        <!-- row -->
-        <div class="row">
-          <!-- col -->
-          <div class="col-xl-6">
-            <!-- head -->
-            <div class="section-head text-xl-left mb-xl-0">
-              <h5 class="mb-0">Sacco Benki Modules</h5>
-              <h2 class="my-3">Monitoring</h2>
-              <p class="font-13">  Teams in the Executive, Risk & Assurance, Operations, Credit, Quality management et al need the dashboard to monitor these & other KPI(s)</p>
-              <p class="mb-0 mx-auto font-13">
-                It’s vital to monitor KPI (Key Performance Indicators) against the realized progress towards a strategic objective.
-              
-
-              </p>
-              <a href="#" class="th-btn th-btn-outline-primary mt-5 d-none">Read more</a>
-            </div>
-          </div>
-          <!-- col -->
-          <div class="col-xl-6">
+    <div class="features-row" id="features">
+        <div class="container">
             <!-- row -->
-            <div class="row child-mb-2 justify-content-center">
-              <!-- col -->
-              <div class="col-xl-4 col-md-3 col-sm-4 col-6 text-center">
-                <!-- box -->
-                <div class="box has-sm-shadow">
-                  <img src="./assets/images/icons/style-02/loan-growth.svg" class="img-fluid mb-3" alt="image">
-                  <h5 class="name">Loan growth</h5>
-                </div>
-              </div>
-              <!-- col -->
-              <div class="col-xl-4 col-md-3 col-sm-4 col-6 text-center">
-                <!-- box -->
-                <div class="box has-sm-shadow">
-                  <img src="./assets/images/icons/style-02/exclaim.svg" class="img-fluid mb-3" alt="image">
-                  <h5 class="name">Delinquency</h5>
-                </div>
-              </div>
-              <!-- col -->
-              <div class="col-xl-4 col-md-3 col-sm-4 col-6 text-center">
-                <!-- box -->
-                <div class="box has-sm-shadow">
-                  <img src="./assets/images/icons/style-02/checklist.svg" class="img-fluid mb-3" alt="image">
-                  <h5 class="name">Compliance & Risks</h5>
-                </div>
-              </div>
-              <!-- col -->
-              <div class="col-xl-4 col-md-3 col-sm-4 col-6 mb-sm-0 text-center">
-                <!-- box -->
-                <div class="box has-sm-shadow">
-                  <img src="./assets/images/icons/style-02/intrests.svg" class="img-fluid mb-3" alt="image">
-                  <h5 class="name">Interest Income</h5>
-                </div>
-              </div>
-              <!-- col -->
-              <div class="col-xl-4 col-md-3 col-sm-4 col-6 mb-0 text-center">
-                <!-- box -->
-                <div class="box has-sm-shadow">
-                  <img src="./assets/images/icons/style-02/members.svg" class="img-fluid mb-3" alt="image">
-                  <h5 class="name">Number of customers</h5>
-                </div>
-              </div>
-              <!-- col -->
-              <div class="col-xl-4 col-md-3 col-sm-4 col-6 mb-0 text-center">
-                <!-- box -->
-                <div class="box has-sm-shadow">
-                  <img src="./assets/images/icons/style-02/portfolio.svg" class="img-fluid mb-3" alt="image">
-                  <h5 class="name">Portfolios</h5>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  
+            <div class="row home-section-2">
 
-
-    <!-- :: Section VI -->
-
-    <section id="billing" class="overview-block-ptb iq-amazing-tab grey-bg py-80 features-row">
-      <div class="container">
-
-        	<!-- section head -->
-        <div class="section-head text-center">
-          <h5 class="mb-0">Sacco Benki Modules</h5>
-          <h3 class="mb-3 text-white">The Mobile App Features</h3>
-          <p class="the-grey-text">
-            Here are some of the amazing features that come with our mobile App
-          </p>
-        </div>
-          
-          <div class="row">
-              <div class="col-sm-6 col-md-6 col-lg-4">
-                  <!-- Nav tabs -->
-                  <ul class="nav nav-tabs" role="tablist">
-                      <li role="presentation" class="active wow fadeInLeft" data-wow-duration="1s">
-                          <a class="round-right" href="#design" aria-controls="design" role="tab" data-toggle="tab">
-                              <div class="iq-fancy-box-01 text-right">
-                                  <i aria-hidden="true" class="mdi mdi-thumb-up-outline"></i>
-                                  <h4 class="iq-tw-6">Simple</h4>
-                                  <div class="fancy-content-01">
-                                      <p>The app is simple and easy to navigate through hence enabling your customers to use it effectively and efficiently</p>
-                                  </div>
-                              </div>
-                          </a>
-                      </li>
-                      <li role="presentation" class="wow fadeInLeft" data-wow-duration="1s" >
-                          <a class="round-right" href="#resolution" aria-controls="resolution" role="tab" data-toggle="tab">
-                              <div class="iq-fancy-box-01 text-right">
-                                  <i aria-hidden="true" class="mdi mdi-receipt"></i>
-                                  <h4 class="iq-tw-6">Bill Payments</h4>
-                                  <div class="fancy-content-01">
-                                      <p>Allow your customers to easily pay for their utility bills from their debit account with the help of the App.</p>
-                                  </div>
-                              </div>
-                          </a>
-                      </li>
-                      <li role="presentation" class="wow fadeInLeft" data-wow-duration="1s">
-                          <a class="round-right" href="#ready" aria-controls="ready" role="tab" data-toggle="tab">
-                              <div class="iq-fancy-box-01 text-right">
-                                  <i aria-hidden="true" class="mdi mdi-bell-check-outline"></i>
-                                  <h4 class="iq-tw-6">Notifications</h4>
-                                  <div class="fancy-content-01">
-                                      <p>
-                                        SACCO Members are notified in real time on matters concerning their accounts and loans as well as messages and announcements from the SACCO.
-                                      </p>
-                                  </div>
-                              </div>
-                          </a>
-                      </li>
-                  </ul>
-              </div>
-              <div class="col-lg-4 text-center hidden-sm hidden-xs">
-                  <!-- Tab panes -->
-                  <div class="tab-content">
-                      <div role="tabpanel" class="tab-pane active" id="design"><img src="assets/images/screenshots/01.jpg" class="img-responsive center-block" alt="#"></div>
-                      <div role="tabpanel" class="tab-pane" id="resolution"><img src="assets/images/screenshots/02.jpg" class="img-responsive center-block" alt="#"></div>
-                      <div role="tabpanel" class="tab-pane" id="ready"><img src="assets/images/screenshots/03.jpg" class="img-responsive center-block" alt="#"></div>
-                      <div role="tabpanel" class="tab-pane" id="fertures"><img src="assets/images/screenshots/04.jpg" class="img-responsive center-block" alt="#"></div>
-                      <div role="tabpanel" class="tab-pane" id="face"><img src="assets/images/screenshots/05.jpg" class="img-responsive center-block" alt="#"></div>
-                      <div role="tabpanel" class="tab-pane" id="codes"><img src="assets/images/screenshots/06.jpg" class="img-responsive center-block" alt="#"></div>
-                  </div>
-              </div>
-              <div class="col-sm-6 col-md-6 col-lg-4">
-                  <ul class="nav nav-tabs" role="tablist">
-                      <li role="presentation" class="wow fadeInRight" data-wow-duration="1s">
-                          <a href="#fertures" aria-controls="fertures" role="tab" data-toggle="tab">
-                              <div class="iq-fancy-box-01">
-                                  <i aria-hidden="true" class="mdi mdi-cash-multiple"></i>
-                                  <h4 class="iq-tw-6">Loans</h4>
-                                  <div class="fancy-content-01">
-                                      <p>
-                                        Allow your members to easily apply for loan and follow up on their applications and existing loans. This way the time taken to apply for a loan is greatly reduced and made even more attractive to your members.
-                                      </p>
-                                  </div>
-                              </div>
-                          </a>
-                      </li>
-                      <li role="presentation" class="wow fadeInRight" data-wow-duration="1s">
-                          <a href="#face" aria-controls="face" role="tab" data-toggle="tab">
-                              <div class="iq-fancy-box-01">
-                                  <i aria-hidden="true" class="mdi mdi-cash-refund"></i>
-                                  <h4 class="iq-tw-6">Funds Withdrawal</h4>
-                                  <div class="fancy-content-01">
-                                      <p>Allow your members to withdraw their funds easily and efficiently through mobile wallets and their bank accounts with a click of a button.</p>
-                                  </div>
-                              </div>
-                          </a>
-                      </li>
-                      <li role="presentation" class="wow fadeInRight" data-wow-duration="1s">
-                          <a href="#codes" aria-controls="codes" role="tab" data-toggle="tab">
-                              <div class="iq-fancy-box-01">
-                                  <i aria-hidden="true" class="mdi mdi-history"></i>
-                                  <h4 class="iq-tw-6">Statements</h4>
-                                  <div class="fancy-content-01">
-                                      <p>With the transaction’s history in place, member can easily have a view of their account activities anywhere at any time.</p>
-                                  </div>
-                              </div>
-                          </a>
-                      </li>
-                  </ul>
-              </div>
-          </div>
-      </div>
-  </section>
-   
-   
-
-  </main>
-
-  <!-- :: Footer -->
-  <footer class="" id="contacts">
-    <!-- newsletter -->
-    <div class="n-l">
-      <div class="container">
-        <h2 class="mb-4">Subscribe To Our Newsletter</h2>
-        <form action="#" class="row">
-            <div class="col-sm-12 col-md-8">
-              <div class="row">
-                <div class="col-sm-12 col-md-6">
-                  <div class="form-group">
-                    <label class="text-white d-none">Name</label>
-                    <input type="text" class="form-control" placeholder="Your full Names">
-                  </div>
+                <!-- col -->
+                <div class="col-xl-4 col-md-6 text-md-left text-center">
+                    <!-- item -->
+                    <div class="item py-5 pb-xl-5">
+                        <span>
+              <i class="mdi mdi-fingerprint text-primary  d-inline-flex align-items-center justify-content-center"></i>
+            </span>
+                        <h5 class="name mb-3">Secure</h5>
+                        <p class="mb-0">
+                            From sophisticated passwords and pins encryption techniques to the implementation of highly secure servers, Sacco Benki will ensure the protection of both Data and members investments at all costs.
+                        </p>
+                    </div>
                 </div>
-                <div class="col-sm-12 col-md-6">
-                  <div class="form-group">
-                    <label class="text-white d-none">Phone Number</label>
-                    <input type="text" class="form-control" placeholder="Enter your phone number">
-                  </div>
+
+                <!-- col -->
+                <div class="col-xl-4 col-md-6 text-md-left text-center">
+                    <!-- item -->
+                    <div class="item pt-md-5 pt-4 pb-xl-5">
+                        <span>
+              <i class="mdi mdi-access-point-check text-primary  d-inline-flex align-items-center justify-content-center"></i>
+            </span>
+                        <h5 class="name mb-3">Reliable</h5>
+                        <p class="mb-0">
+                            This is key and has been addressed thoroughly through ensuring that the platform is made available through the mobile app store, web apps and several portals each with customized functionalities for the different users.
+                        </p>
+                    </div>
                 </div>
-                <div class="col-sm-12 col-md-6">
-                  <div class="form-group">
-                    <label class="text-white d-none">Email</label>
-                    <input type="email" class="form-control" placeholder="Enter your email">
-                  </div>
+
+                <!-- col -->
+                <div class="col-xl-4 col-md-6 text-md-left text-center">
+                    <!-- item -->
+
+                    <div class="item pt-xl-5 pt-4 pb-5">
+                        <span>
+              <i class="mdi mdi-thumb-up-outline text-primary  d-inline-flex align-items-center justify-content-center"></i>
+            </span>
+                        <h5 class="name mb-3">Adaptable</h5>
+                        <p class="mb-0">It’s hard to believe anyone would want to harm your website, but they do. Thankfully, our security team is on the job 24/7 to meticulously monitor.</p>
+                    </div>
                 </div>
-    
-                <div class="col-sm-12 col-md-6">
-                  <div class="form-group">
-                    <label class="text-white d-none">Subject</label>
-                    <input type="email" class="form-control" placeholder="Enter your subject">
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-12 col-md-4">
-              <div class="form-group">
-                <label class="d-none">Your Message</label>
-                <textarea class="form-control p-3" placeholder="Enter the message" style="height:117px;"></textarea>
-              </div>
-              <p class="d-flex justify-content-end">
-                <button class="btn btn-primary">Send <i class="ml-3 mdi mdi-send-outline"></i></button>
-              </p>
+
             </div>
 
-          <div class="d-sm-flex align-items-center justify-content-start d-none">
-            <input type="email" class="w-100 mb-sm-0 mb-3" placeholder="Email Address" autocomplete="off" required>
-            <button class="text-uppercase" type="submit">Sign Up</button>
-          </div>
-        </form>
-      </div>
+        </div>
     </div>
-    <!-- links -->
-    <div class="links">
-      <div class="container">
-        <!-- row -->
-        <div class="row">
-          <div class="col-12 mb-3 d-none">
-            <div class="row">
-              <div class="col-6">
-                <img src="assets/images/logos/logo-white.png" height="99px">
-                <p></p>
-              </div>
+
+    <!-- :: Main -->
+    <main>
+
+        <!-- :: Section I -->
+        <div class="se-i py-80" id="sacco-benefits">
+            <div class="container">
+                <!-- head -->
+                <div class="section-head">
+                    <h5 class="mb-0">Sacco Benki Benefits</h5>
+                    <h2 class="my-3">Why Sacco Benki?</h2>
+                    <p class="mb-0 mx-auto">
+                        The following are the benefits of Sacco Benki
+                    </p>
+                </div>
+                <!-- row -->
+                <div class="row child-mb-2">
+
+                    <!-- col -->
+                    <div class="col-xl-4 col-md-6 col-12">
+                        <div class="fe-box text-md-left text-center">
+                            <img src="./assets/images/icons/style-02/checklist.svg" class="img-fluid mb-4" alt="image">
+                            <!-- text contain -->
+                            <div class="t-c">
+                                <h4 class="mb-md-5 mb-4">KYC Compliance</h4>
+                                <p class="mb-0">
+                                    Compliance with the sector and/or Central Bank rules, policies & laws on KYC.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- col -->
+
+                    <!-- col -->
+                    <div class="col-xl-4 col-md-6 col-12">
+                        <div class="fe-box text-md-left text-center">
+                            <img src="./assets/images/icons/style-02/umbrella.svg" class="img-fluid mb-4" alt="image">
+                            <!-- text contain -->
+                            <div class="t-c">
+                                <h4 class="mb-md-5 mb-4">Risk Mitigation</h4>
+                                <p class="mb-0">
+                                    Multifactor authentication for the system, this helps eliminate risks of hacking, illegal access to the system, and/or unauthorized access to data in the system.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- col -->
+                    <div class="col-xl-4 col-md-6 col-12">
+                        <div class="fe-box text-md-left text-center">
+                            <img src="./assets/images/icons/style-02/maintenance.svg" class="img-fluid mb-4" alt="image">
+                            <!-- text contain -->
+                            <div class="t-c">
+                                <h4 class="mb-md-5 mb-4">Workflow</h4>
+                                <p class="mb-0">
+                                    Maker-Checker workflow support.Inbuilt continuous security monitoring and improvements.Sequential & rule-based workflow for routing & escalation of loan applications. Bi-directional flow is between authorized system users.
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- col -->
+                    <div class="col-xl-4 col-md-6 col-12">
+                        <div class="fe-box text-md-left text-center">
+                            <img src="./assets/images/icons/style-02/forms.svg" class="img-fluid mb-4" alt="image">
+                            <!-- text contain -->
+                            <div class="t-c">
+                                <h4 class="mb-md-5 mb-4">E-Forms</h4>
+                                <p class="mb-0">
+                                    Document management feature which enables customer to upload document into the system such as Microsoft word, PDF, JPEG or PNG. Loan application form with credit score engine for appraisal. Instant customer feedback on qualification reduce on paperwork.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- col -->
+                    <div class="col-xl-4 col-md-6 col-12 mb-xl-0">
+                        <div class="fe-box text-md-left text-center">
+                            <img src="./assets/images/icons/style-02/maintenance.svg" class="img-fluid mb-4" alt="image">
+                            <!-- text contain -->
+                            <div class="t-c">
+                                <h4 class="mb-md-5 mb-4">Mobility</h4>
+                                <p class="mb-0">
+                                    “B2C”model; business goes to customer. Offline Mode: Enables agents to “hunt” for customers anywhere and sync their transactions with the central server later. “Anytime-Anywhere” philosophy; boosts numbers, values & customer satisfaction index.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- col -->
+                    <div class="col-xl-4 col-md-6 col-12 mb-md-0">
+                        <div class="fe-box text-md-left text-center">
+                            <img src="./assets/images/icons/style-02/notifications.svg" class="img-fluid mb-4" alt="image">
+                            <!-- text contain -->
+                            <div class="t-c">
+                                <h4 class="mb-md-5 mb-4">Notifications</h4>
+                                <p class="mb-0">
+                                    SACCO Benki has an integrated bulk SMS module. This combined with email notifications feature helps SACCO deliver real time notifications to members. Email notifications are sent to the transacting users at set stages of the process workflow. SMS notifications
+                                    are sent to the customer, to all networks and across borders.
+
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- col -->
+                    <div class="col-xl-4 col-md-6 col-12 mb-0">
+                        <div class="fe-box text-md-left text-center">
+                            <img src="./assets/images/icons/style-02/folder.svg" class="img-fluid mb-4" alt="image">
+                            <!-- text contain -->
+                            <div class="t-c">
+                                <h4 class="mb-md-5 mb-4">Record Management</h4>
+                                <p class="mb-0">
+                                    Capture, organize, store & retrieve records with ease. Audit process made easier by digitization of records & workflow.
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4 col-md-6 col-12 mb-0">
+                        <div class="fe-box text-md-left text-center">
+                            <img src="./assets/images/icons/style-02/sync.svg" class="img-fluid mb-4" alt="image">
+                            <!-- text contain -->
+                            <div class="t-c">
+                                <h4 class="mb-md-5 mb-4">Synchronization</h4>
+                                <p class="mb-0">
+                                    Real time sync of information between agents and the core system. There is an offline support that allows agents to transact in an offline mode & upload/sync them to the server later.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4 col-md-6 col-12 mb-0">
+                        <div class="fe-box text-md-left text-center">
+                            <img src="./assets/images/icons/style-02/mpesa.png" class="img-fluid mb-4" alt="image">
+                            <!-- text contain -->
+                            <div class="t-c">
+                                <h4 class="mb-md-5 mb-4">Mpesa Integration</h4>
+                                <p class="mb-0">
+                                    Integrates with Mpesa to allow members to pay for their loans and contributions via Mpesa automatically. </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
             </div>
-          </div>
-          <!-- col -->
-          <div class="col-lg-4 col-md-4 col-sm-4 col-6 mb-lg-0 mb-3">
-            <ul class="list-unstyled mb-0">
-             <li>
-              <img src="assets/images/logos/logo-white.png" height="80px" class="mb-3">
-               <p class="font-14 footer-link"><span class="mr-2 mdi mdi-map-marker-outline"></span>Tulip House, 6th Floor, Wing B. Mombasa Rd, next to Sameer Business Park</p>
-             </li>
-              
-            </ul>
-          </div>
-          <!-- col -->
-          
-          <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-lg-0 mb-3">
-            <ul class="list-unstyled mb-0">
-              <li class="title text-uppercase mb-3">Contacts</li>
-              <li class="d-none"><a href="tel:+254-759-067-452" class="text-capitalize">+254-759-067-452</a></li>
-              <li><a href="tel:+254-774-387-419" class="text-capitalize">+254-774-387-419</a></li>
-              <li><a href="mailto:info@nouveta.tech" class="text-capitalize">info@nouveta.tech</a></li>
-              <li><a href="https://nouveta.tech/" target="new" class="text-capitalize">company's Website</a></li>
-            </ul>
-          </div>
-          <!-- col -->
-          <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-lg-0 mb-md-3">
-            <ul class="list-unstyled mb-0">
-              <li class="title text-uppercase mb-3">Links</li>
-              <li><a href="#" class="text-capitalize">Home</a></li>
-              <li><a href="#" class="text-capitalize">Benefits</a></li>
-              <li><a href="#" class="text-capitalize">System Modules</a></li>
-              <li><a href="#" class="text-capitalize">Mobile App</a></li>
-            </ul>
-          </div>
-         
-          <!-- col -->
-          <div class="col-lg-3 col-md-3 col-sm-4 col-6 mb-lg-0 mb-0">
-            <ul class="list-unstyled mb-0">
-              <li class="title text-uppercase mb-3">Our Other Products</li>
-              <li><a href="https://revenuesure.co.ke/" target="new" class="text-capitalize">RevenueSure</a></li>
-              <li><a href="https://blink.co.ke/" target="new" class="text-capitalize">Blink</a></li>
-              <li><a href="https://reconmate.com/" target="new" class="text-capitalize">ReconMate</a></li>
-            </ul>
-          </div>
         </div>
-      </div>
-    </div>
-    <!-- copyrights -->
-    <div class="c-r text-left">
-      <div class="container veta-foot">
-        <div class="row">
-            <a href="https://nouveta.tech/" target="new" title="Visit our website"><img src="./assets/images/nouveta/footer.svg" class="opacity-5"></a>
-          <div class="col">
-            <p class="mb-0 pb-0">&copy; Copyright 2020, Nouveta LTD</p>
-            <p class="comment mb-0 d-none">Developed By
-              <a href="http://bit.ly/niftytheme" target="_blank">Nifty Theme</a>
-            </p>
-          </div>
+
+        <!-- :: Features Row -->
+        <div class="features-row" id="monitoring">
+            <div class="container">
+                <!-- row -->
+                <div class="row">
+                    <!-- col -->
+                    <div class="col-sm-12 col-md-8 text-md-left text-center">
+                        <!-- item -->
+                        <div class="item pt-5 pb-xl-5">
+                            <h5 class="name mb-3">Monitoring</h5>
+
+                            <p class="mb-0"> Anytime anywhere philosophy of services can be adopted. As your partner, our platform will offer you the much needed <strong>"CVVA"</strong> features.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </footer>
 
-  <!-- :: Scripts -->
-  <script src="./assets/js/lib/jquery-3.3.1.min.js"></script>
-  <script src="./assets/js/lib/popper.js"></script>
-  <script src="./assets/js/lib/bootstrap.min.js"></script>
-  <script src="./assets/js/lib/owl.js"></script>
-  <script src="./assets/js/lib/wow.js"></script>
-  <script src="./assets/js/lib/jquery.localScroll.min.js"></script>
-  <script src="./assets/js/theme/theme.js"></script>
+        <!-- :: Partners -->
+        <div class="partners py-80" id="modules">
+            <div class="container">
+                <!-- section head -->
+                <div class="section-head text-center">
+                    <h3 class="mb-3">Sacco Benki Modules</h3>
+                    <p>
+                        The following are the available modules for sacco Benki.
+                    </p>
+                </div>
+                <!-- row -->
+                <div class="row align-items-center text-lg-left text-center mb-60">
+                    <!-- col -->
+                    <div class="col-lg-6 mb-lg-0 mb-4">
+                        <!-- contect -->
+                        <div class="content">
+                            <!-- img contain -->
+                            <div class="img-c">
+                                <img src="./assets/images/webImages/operational.png" class="img-fluid" alt="img">
+                            </div>
+                            <div class="th-badge green top right d-flex align-items-center justify-content-center">
+                                <img src="./assets/images/icons/modules/operations.png" class="img-fluid" alt="img">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- col -->
+                    <div class="col-lg-6">
+                        <!-- text contain -->
+                        <div class="t-c">
+                            <h3 class="mb-3">Operational Portal/Member management Operational Portal</h3>
+                            <p class="mb-3">
+                                This is the core module that takes care of the entire member registration process, loan application to loan disbursement. This portal makes the day-to-day activities of the SACCO much easier and much more effective reducing the turnaround time and thus
+                                helps improve the SACCO's performance and boosting member relationship in the end.
+                            </p>
+                            <a href="#" class="text-capitalize d-none">visit website now<i class="fa fa-arrow-right ml-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- row -->
+                <div class="row align-items-center text-lg-left text-center mb-60">
+                    <!-- col -->
+                    <div class="col-lg-6 order-lg-2 mb-lg-0 mb-4">
+                        <!-- contect -->
+                        <div class="content">
+                            <!-- img contain -->
+                            <div class="img-c">
+                                <img src="./assets/images/webImages/finance.jpg" class="img-fluid" alt="img">
+                            </div>
+                            <div class="th-badge blue bottom left d-flex align-items-center justify-content-center">
+                                <img src="./assets/images/icons/modules/finance.png" class="img-fluid" alt="img">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- col -->
+                    <div class="col-lg-6 order-lg-1">
+                        <!-- text contain -->
+                        <div class="t-c">
+                            <h3 class="mb-3">Finance & Reporting Dashboards</h3>
+                            <p class="mb-3">
+                                Given the fierce competition in the financial sector, it is essential to arm yourself with visualization tools for crucial decisions for the future of your company. Our dashboard (figures & charts) enables you to tell the story of your performance through
+                                charts and graphs and also give analyzed reports on the SACCO's performance.
+                            </p>
+                            <a href="#" class="text-capitalize d-none">visit website now<i class="fa fa-arrow-right ml-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- row -->
+                <div class="row align-items-center text-lg-left text-center mb-60">
+                    <!-- col -->
+                    <div class="col-lg-6 mb-lg-0 mb-4">
+                        <!-- contect -->
+                        <div class="content">
+                            <!-- img contain -->
+                            <div class="img-c">
+                                <img src="./assets/images/webImages/web.jpg" class="img-fluid" alt="img">
+                            </div>
+                            <div class="th-badge move top right d-flex align-items-center justify-content-center">
+                                <img src="./assets/images/icons/modules/web.png" class="img-fluid" alt="img">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- col -->
+                    <div class="col-lg-6">
+                        <!-- text contain -->
+                        <div class="t-c">
+                            <h3 class="mb-3">Customer's Self Service Portal</h3>
+                            <p class="mb-3">From the self-service portal, SACCO members can view their statements, request for loans, appoint loan guarantors, approve or reject requests from fellow members to guarantee their loans.</p>
+                            <a href="#" class="text-capitalize d-none">visit website now<i class="fa fa-arrow-right ml-2"></i></a>
 
-  <script>
-    $(document).ready(function(){
-    // alert("we giood");
-    $('#contacts').localScroll();
-    $('#billing').localScroll();
-    $('#modules').localScroll();
-    $('#monitoring').localScroll();
-    $('#sacco-benefits').localScroll();
-    $('#features').localScroll();
-    $('#home').localScroll();
-  });
-  </script>
+                        </div>
+                    </div>
+                </div>
+                <!-- row -->
+                <div class="row align-items-center text-lg-left text-center">
+                    <!-- col -->
+                    <div class="col-lg-6 order-lg-2 mb-lg-0 mb-4">
+                        <!-- contect -->
+                        <div class="content">
+                            <!-- img contain -->
+                            <div class="img-c">
+                                <img src="./assets/images/webImages/phone.jpg" class="img-fluid" alt="img">
+                            </div>
+                            <div class="th-badge orange bottom left d-flex align-items-center justify-content-center">
+                                <img src="./assets/images/icons/modules/phone.png" class="img-fluid" alt="img">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- col -->
+                    <div class="col-lg-6 order-lg-1">
+                        <!-- text contain -->
+                        <div class="t-c">
+                            <h3 class="mb-3">Customer's Mobile App</h3>
+                            <p class="mb-3">
+                                Every SACCO software system needs a mobile app that allows members to access their accounts and perform transactions. With the help of this mobile app, customers can get real time notifications and still have access to the services offered by the SACCO
+                                at the palm of their hand. With the app in place, the SACCO members can access services such as loan borrowing and fund deposits easily.
+                            </p>
+                            <a href="#" class="text-capitalize d-none">Mobile App features<i class="fa fa-arrow-right ml-2"></i></a>
+                            <a href="#" class="th-btn th-btn-outline-primary mx-2 my-2"><i class="mdi mdi-android-debug-bridge mr-2"></i>Check It Out</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- row -->
+                <div class="row align-items-center text-lg-left text-center mb-60">
+                    <!-- col -->
+                    <div class="col-lg-6 mb-lg-0 mb-4">
+                        <!-- contect -->
+                        <div class="content">
+                            <!-- img contain -->
+                            <div class="img-c">
+                                <img src="./assets/images/webImages/loan.jpg" class="img-fluid" alt="img">
+                            </div>
+                            <div class="th-badge move top right d-flex align-items-center justify-content-center">
+                                <img src="./assets/images/icons/tax.svg" class="img-fluid" alt="img">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- col -->
+                    <div class="col-lg-6">
+                        <!-- text contain -->
+                        <div class="t-c">
+                            <h3 class="mb-3">Loan management</h3>
+                            <p class="mb-3">Loan product set up and configuration, loan application process, loan appraisal process, loan approval process, loan disbursement and loan repayment process. </p>
+                            <a href="#" class="text-capitalize d-none">visit website now<i class="fa fa-arrow-right ml-2"></i></a>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- row -->
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+        <!-- :: Section IV -->
+        <!-- :: Section III -->
+        <div class="se-iii py-80 bg-2">
+            <div class="container">
+                <!-- row -->
+                <div class="row">
+                    <!-- col -->
+                    <div class="col-xl-6">
+                        <!-- head -->
+                        <div class="section-head text-xl-left mb-xl-0">
+                            <h5 class="mb-0">Sacco Benki Modules</h5>
+                            <h2 class="my-3">Monitoring</h2>
+                            <p class="font-13"> Teams in the Executive, Risk & Assurance, Operations, Credit, Quality management et al need the dashboard to monitor these & other KPI(s)</p>
+                            <p class="mb-0 mx-auto font-13">
+                                It’s vital to monitor KPI (Key Performance Indicators) against the realized progress towards a strategic objective.
+
+
+                            </p>
+                            <a href="#" class="th-btn th-btn-outline-primary mt-5 d-none">Read more</a>
+                        </div>
+                    </div>
+                    <!-- col -->
+                    <div class="col-xl-6">
+                        <!-- row -->
+                        <div class="row child-mb-2 justify-content-center">
+                            <!-- col -->
+                            <div class="col-xl-4 col-md-3 col-sm-4 col-6 text-center">
+                                <!-- box -->
+                                <div class="box has-sm-shadow">
+                                    <img src="./assets/images/icons/style-02/loan-growth.svg" class="img-fluid mb-3" alt="image">
+                                    <h5 class="name">Loan growth</h5>
+                                </div>
+                            </div>
+                            <!-- col -->
+                            <div class="col-xl-4 col-md-3 col-sm-4 col-6 text-center">
+                                <!-- box -->
+                                <div class="box has-sm-shadow">
+                                    <img src="./assets/images/icons/style-02/exclaim.svg" class="img-fluid mb-3" alt="image">
+                                    <h5 class="name">Delinquency</h5>
+                                </div>
+                            </div>
+                            <!-- col -->
+                            <div class="col-xl-4 col-md-3 col-sm-4 col-6 text-center">
+                                <!-- box -->
+                                <div class="box has-sm-shadow">
+                                    <img src="./assets/images/icons/style-02/checklist.svg" class="img-fluid mb-3" alt="image">
+                                    <h5 class="name">Compliance & Risks</h5>
+                                </div>
+                            </div>
+                            <!-- col -->
+                            <div class="col-xl-4 col-md-3 col-sm-4 col-6 mb-sm-0 text-center">
+                                <!-- box -->
+                                <div class="box has-sm-shadow">
+                                    <img src="./assets/images/icons/style-02/intrests.svg" class="img-fluid mb-3" alt="image">
+                                    <h5 class="name">Interest Income</h5>
+                                </div>
+                            </div>
+                            <!-- col -->
+                            <div class="col-xl-4 col-md-3 col-sm-4 col-6 mb-0 text-center">
+                                <!-- box -->
+                                <div class="box has-sm-shadow">
+                                    <img src="./assets/images/icons/style-02/members.svg" class="img-fluid mb-3" alt="image">
+                                    <h5 class="name">Number of customers</h5>
+                                </div>
+                            </div>
+                            <!-- col -->
+                            <div class="col-xl-4 col-md-3 col-sm-4 col-6 mb-0 text-center">
+                                <!-- box -->
+                                <div class="box has-sm-shadow">
+                                    <img src="./assets/images/icons/style-02/portfolio.svg" class="img-fluid mb-3" alt="image">
+                                    <h5 class="name">Portfolios</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- :: Section VI -->
+
+        <section id="billing" class="overview-block-ptb iq-amazing-tab grey-bg py-80 features-row">
+            <div class="container">
+
+                <!-- section head -->
+                <div class="section-head text-center">
+                    <h5 class="mb-0">Sacco Benki Modules</h5>
+                    <h3 class="mb-3 text-white">The Mobile App Features</h3>
+                    <p class="the-grey-text">
+                        Here are some of the amazing features that come with our mobile App
+                    </p>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6 col-md-6 col-lg-4">
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active wow fadeInLeft" data-wow-duration="1s">
+                                <a class="round-right" href="#design" aria-controls="design" role="tab" data-toggle="tab">
+                                    <div class="iq-fancy-box-01 text-right">
+                                        <i aria-hidden="true" class="mdi mdi-thumb-up-outline"></i>
+                                        <h4 class="iq-tw-6">Simple</h4>
+                                        <div class="fancy-content-01">
+                                            <p>The app is simple and easy to navigate through hence enabling your customers to use it effectively and efficiently</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li role="presentation" class="wow fadeInLeft" data-wow-duration="1s">
+                                <a class="round-right" href="#resolution" aria-controls="resolution" role="tab" data-toggle="tab">
+                                    <div class="iq-fancy-box-01 text-right">
+                                        <i aria-hidden="true" class="mdi mdi-receipt"></i>
+                                        <h4 class="iq-tw-6">Bill Payments</h4>
+                                        <div class="fancy-content-01">
+                                            <p>Allow your customers to easily pay for their utility bills from their debit account with the help of the App.</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li role="presentation" class="wow fadeInLeft" data-wow-duration="1s">
+                                <a class="round-right" href="#ready" aria-controls="ready" role="tab" data-toggle="tab">
+                                    <div class="iq-fancy-box-01 text-right">
+                                        <i aria-hidden="true" class="mdi mdi-bell-check-outline"></i>
+                                        <h4 class="iq-tw-6">Notifications</h4>
+                                        <div class="fancy-content-01">
+                                            <p>
+                                                SACCO Members are notified in real time on matters concerning their accounts and loans as well as messages and announcements from the SACCO.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 text-center hidden-sm hidden-xs">
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="design"><img src="assets/images/screenshots/01.jpg" class="img-responsive center-block" alt="#"></div>
+                            <div role="tabpanel" class="tab-pane" id="resolution"><img src="assets/images/screenshots/02.jpg" class="img-responsive center-block" alt="#"></div>
+                            <div role="tabpanel" class="tab-pane" id="ready"><img src="assets/images/screenshots/03.jpg" class="img-responsive center-block" alt="#"></div>
+                            <div role="tabpanel" class="tab-pane" id="fertures"><img src="assets/images/screenshots/04.jpg" class="img-responsive center-block" alt="#"></div>
+                            <div role="tabpanel" class="tab-pane" id="face"><img src="assets/images/screenshots/05.jpg" class="img-responsive center-block" alt="#"></div>
+                            <div role="tabpanel" class="tab-pane" id="codes"><img src="assets/images/screenshots/06.jpg" class="img-responsive center-block" alt="#"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-4">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="wow fadeInRight" data-wow-duration="1s">
+                                <a href="#fertures" aria-controls="fertures" role="tab" data-toggle="tab">
+                                    <div class="iq-fancy-box-01">
+                                        <i aria-hidden="true" class="mdi mdi-cash-multiple"></i>
+                                        <h4 class="iq-tw-6">Loans</h4>
+                                        <div class="fancy-content-01">
+                                            <p>
+                                                Allow your members to easily apply for loan and follow up on their applications and existing loans. This way the time taken to apply for a loan is greatly reduced and made even more attractive to your members.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li role="presentation" class="wow fadeInRight" data-wow-duration="1s">
+                                <a href="#face" aria-controls="face" role="tab" data-toggle="tab">
+                                    <div class="iq-fancy-box-01">
+                                        <i aria-hidden="true" class="mdi mdi-cash-refund"></i>
+                                        <h4 class="iq-tw-6">Funds Withdrawal</h4>
+                                        <div class="fancy-content-01">
+                                            <p>Allow your members to withdraw their funds easily and efficiently through mobile wallets and their bank accounts with a click of a button.</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li role="presentation" class="wow fadeInRight" data-wow-duration="1s">
+                                <a href="#codes" aria-controls="codes" role="tab" data-toggle="tab">
+                                    <div class="iq-fancy-box-01">
+                                        <i aria-hidden="true" class="mdi mdi-history"></i>
+                                        <h4 class="iq-tw-6">Statements</h4>
+                                        <div class="fancy-content-01">
+                                            <p>With the transaction’s history in place, member can easily have a view of their account activities anywhere at any time.</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+    </main>
+
+    <!-- :: Footer -->
+    <footer class="" id="contacts">
+        <!-- newsletter -->
+        <div class="n-l">
+            <div class="container">
+                <h2 class="mb-4">Subscribe To Our Newsletter</h2>
+                <form action="#" class="row">
+                    <div class="col-sm-12 col-md-8">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6">
+                                <div class="form-group">
+                                    <label class="text-white d-none">Name</label>
+                                    <input type="text" class="form-control" placeholder="Your full Names">
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-6">
+                                <div class="form-group">
+                                    <label class="text-white d-none">Phone Number</label>
+                                    <input type="text" class="form-control" placeholder="Enter your phone number">
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-6">
+                                <div class="form-group">
+                                    <label class="text-white d-none">Email</label>
+                                    <input type="email" class="form-control" placeholder="Enter your email">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12 col-md-6">
+                                <div class="form-group">
+                                    <label class="text-white d-none">Subject</label>
+                                    <input type="email" class="form-control" placeholder="Enter your subject">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-4">
+                        <div class="form-group">
+                            <label class="d-none">Your Message</label>
+                            <textarea class="form-control p-3" placeholder="Enter the message" style="height:117px;"></textarea>
+                        </div>
+                        <p class="d-flex justify-content-end">
+                            <button class="btn btn-primary">Send <i class="ml-3 mdi mdi-send-outline"></i></button>
+                        </p>
+                    </div>
+
+                    <div class="d-sm-flex align-items-center justify-content-start d-none">
+                        <input type="email" class="w-100 mb-sm-0 mb-3" placeholder="Email Address" autocomplete="off" required>
+                        <button class="text-uppercase" type="submit">Sign Up</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- links -->
+        <div class="links">
+            <div class="container">
+                <!-- row -->
+                <div class="row">
+                    <div class="col-12 mb-3 d-none">
+                        <div class="row">
+                            <div class="col-6">
+                                <img src="assets/images/logos/logo-white.png" height="99px">
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- col -->
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-6 mb-lg-0 mb-3">
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <img src="assets/images/logos/logo-white.png" height="80px" class="mb-3">
+                                <p class="font-14 footer-link"><span class="mr-2 mdi mdi-map-marker-outline"></span>Tulip House, 6th Floor, Wing B. Mombasa Rd, next to Sameer Business Park</p>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <!-- col -->
+
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-lg-0 mb-3">
+                        <ul class="list-unstyled mb-0">
+                            <li class="title text-uppercase mb-3">Contacts</li>
+                            <li class="d-none"><a href="tel:+254-759-067-452" class="text-capitalize">+254-759-067-452</a></li>
+                            <li><a href="tel:+254-774-387-419" class="text-capitalize">+254-774-387-419</a></li>
+                            <li><a href="mailto:info@nouveta.tech" class="text-capitalize">info@nouveta.tech</a></li>
+                            <li><a href="https://nouveta.tech/" target="new" class="text-capitalize">company's Website</a></li>
+                        </ul>
+                    </div>
+                    <!-- col -->
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-lg-0 mb-md-3">
+                        <ul class="list-unstyled mb-0">
+                            <li class="title text-uppercase mb-3">Links</li>
+                            <li><a href="#" class="text-capitalize">Home</a></li>
+                            <li><a href="#" class="text-capitalize">Benefits</a></li>
+                            <li><a href="#" class="text-capitalize">System Modules</a></li>
+                            <li><a href="#" class="text-capitalize">Mobile App</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- col -->
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-6 mb-lg-0 mb-0">
+                        <ul class="list-unstyled mb-0">
+                            <li class="title text-uppercase mb-3">Our Other Products</li>
+                            <li><a href="https://revenuesure.co.ke/" target="new" class="text-capitalize">RevenueSure</a></li>
+                            <li><a href="https://blink.co.ke/" target="new" class="text-capitalize">Blink</a></li>
+                            <li><a href="https://reconmate.com/" target="new" class="text-capitalize">ReconMate</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- copyrights -->
+        <div class="c-r text-left">
+            <div class="container veta-foot">
+                <div class="row">
+                    <a class="d-none" href="https://nouveta.tech/" target="new" title="Visit our website"><img src="./assets/images/nouveta/footer.svg" class="opacity-5"></a>
+                    <div class="col">
+                        <p class="mb-0 pb-0">&copy; Copyright <strong class="the-year">2020</strong>, Nouveta LTD</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- :: Scripts -->
+    <script src="./assets/js/lib/jquery-3.3.1.min.js"></script>
+    <script src="./assets/js/lib/popper.js"></script>
+    <script src="./assets/js/lib/bootstrap.min.js"></script>
+    <script src="./assets/js/lib/owl.js"></script>
+    <script src="./assets/js/lib/wow.js"></script>
+    <script src="./assets/js/lib/jquery.localScroll.min.js"></script>
+    <script src="./assets/js/theme/theme.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            // alert("we giood");
+            $('#contacts').localScroll();
+            $('#billing').localScroll();
+            $('#modules').localScroll();
+            $('#monitoring').localScroll();
+            $('#sacco-benefits').localScroll();
+            $('#features').localScroll();
+            $('#home').localScroll();
+        });
+    </script>
 </body>
+
 </html>
